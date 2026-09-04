@@ -1,527 +1,711 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Survivor Foundation | Empowering Communities, Changing Lives</title>
+<title>Survivor Foundation | Empowering Communities</title>
 
-  <meta name="description"
-    content="Survivor Foundation is committed to empowering vulnerable communities, supporting families and creating opportunities for a better future.">
+<meta name="description" content="Survivor Foundation works to empower communities, support vulnerable people and create hope for a better future.">
 
-  <meta name="keywords"
-    content="Survivor Foundation, NGO Tanzania, charity Tanzania, community development, donate Tanzania">
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+scroll-behavior:smooth;
+}
 
-  <meta name="author" content="Survivor Foundation">
+body{
+font-family:Arial,Helvetica,sans-serif;
+color:#17231d;
+line-height:1.6;
+background:#fff;
+}
 
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      scroll-behavior: smooth;
-    }
+header{
+position:sticky;
+top:0;
+z-index:999;
+background:#075b3a;
+color:white;
+display:flex;
+align-items:center;
+justify-content:space-between;
+padding:16px 7%;
+box-shadow:0 3px 15px rgba(0,0,0,.15);
+}
 
-    body {
-      font-family: Arial, sans-serif;
-      line-height: 1.6;
-      color: #222;
-      background: #fff;
-    }
+.logo{
+font-size:21px;
+font-weight:800;
+letter-spacing:.5px;
+}
 
-    header {
-      background: #0b5d3b;
-      color: white;
-      padding: 15px 6%;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-    }
+nav{
+display:flex;
+gap:22px;
+}
 
-    .logo {
-      font-size: 22px;
-      font-weight: bold;
-    }
+nav a{
+color:white;
+text-decoration:none;
+font-weight:600;
+}
 
-    nav a {
-      color: white;
-      text-decoration: none;
-      margin-left: 20px;
-      font-weight: bold;
-    }
+nav a:hover{
+color:#f5c542;
+}
 
-    nav a:hover {
-      opacity: 0.75;
-    }
+.hero{
+min-height:88vh;
+display:flex;
+align-items:center;
+padding:80px 7%;
+color:white;
+background:
+linear-gradient(90deg,rgba(0,45,28,.9),rgba(0,45,28,.45)),
+url("https://images.unsplash.com/photo-1469571486292-0ba58a3f068b?auto=format&fit=crop&w=1800&q=85")
+center/cover;
+}
 
-    .hero {
-      min-height: 90vh;
-      display: flex;
-      align-items: center;
-      padding: 70px 7%;
-      background:
-        linear-gradient(rgba(0,0,0,.55), rgba(0,0,0,.55)),
-        url("https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?auto=format&fit=crop&w=1600&q=80")
-        center/cover;
-      color: white;
-    }
+.hero-content{
+max-width:720px;
+}
 
-    .hero-content {
-      max-width: 700px;
-    }
+.badge{
+display:inline-block;
+background:rgba(255,255,255,.15);
+border:1px solid rgba(255,255,255,.3);
+padding:8px 16px;
+border-radius:30px;
+margin-bottom:20px;
+}
 
-    .hero h1 {
-      font-size: 55px;
-      margin-bottom: 20px;
-    }
+.hero h1{
+font-size:58px;
+line-height:1.1;
+margin-bottom:22px;
+}
 
-    .hero p {
-      font-size: 20px;
-      margin-bottom: 30px;
-    }
+.hero p{
+font-size:20px;
+max-width:650px;
+margin-bottom:32px;
+}
 
-    .btn {
-      display: inline-block;
-      background: #f4b400;
-      color: #111;
-      padding: 14px 25px;
-      border-radius: 6px;
-      text-decoration: none;
-      font-weight: bold;
-      margin-right: 10px;
-    }
+.btn{
+display:inline-block;
+padding:14px 25px;
+border-radius:7px;
+background:#f5c542;
+color:#17231d;
+font-weight:800;
+text-decoration:none;
+margin-right:10px;
+}
 
-    .btn.secondary {
-      background: white;
-    }
+.btn.white{
+background:white;
+}
 
-    section {
-      padding: 75px 7%;
-    }
+section{
+padding:80px 7%;
+}
 
-    .section-title {
-      text-align: center;
-      margin-bottom: 45px;
-    }
+.section-heading{
+text-align:center;
+max-width:750px;
+margin:0 auto 50px;
+}
 
-    .section-title h2 {
-      font-size: 36px;
-      color: #0b5d3b;
-      margin-bottom: 10px;
-    }
+.section-heading h2{
+font-size:38px;
+color:#075b3a;
+margin-bottom:12px;
+}
 
-    .about {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 40px;
-      align-items: center;
-    }
+.about{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:50px;
+align-items:center;
+}
 
-    .about img {
-      width: 100%;
-      border-radius: 12px;
-    }
+.about img{
+width:100%;
+height:430px;
+object-fit:cover;
+border-radius:18px;
+}
 
-    .about h3 {
-      font-size: 30px;
-      margin-bottom: 15px;
-      color: #0b5d3b;
-    }
+.about h3{
+font-size:30px;
+color:#075b3a;
+margin-bottom:15px;
+}
 
-    .programs {
-      background: #f5f8f6;
-    }
+.about p{
+margin-bottom:15px;
+}
 
-    .cards {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 25px;
-    }
+.check{
+margin-top:20px;
+font-weight:bold;
+}
 
-    .card {
-      background: white;
-      padding: 30px;
-      border-radius: 12px;
-      box-shadow: 0 5px 20px rgba(0,0,0,.08);
-      text-align: center;
-    }
+.programs{
+background:#f4f8f5;
+}
 
-    .card .icon {
-      font-size: 45px;
-      margin-bottom: 15px;
-    }
+.cards{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:25px;
+}
 
-    .card h3 {
-      color: #0b5d3b;
-      margin-bottom: 12px;
-    }
+.card{
+background:white;
+padding:32px 25px;
+border-radius:15px;
+box-shadow:0 8px 25px rgba(0,0,0,.07);
+transition:.3s;
+}
 
-    .impact {
-      background: #0b5d3b;
-      color: white;
-      text-align: center;
-    }
+.card:hover{
+transform:translateY(-7px);
+}
 
-    .impact h2 {
-      font-size: 38px;
-      margin-bottom: 15px;
-    }
+.icon{
+font-size:42px;
+margin-bottom:15px;
+}
 
-    .stats {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 25px;
-      margin-top: 35px;
-    }
+.card h3{
+color:#075b3a;
+margin-bottom:10px;
+font-size:21px;
+}
 
-    .stat h3 {
-      font-size: 40px;
-      color: #f4b400;
-    }
+.impact{
+background:#075b3a;
+color:white;
+text-align:center;
+}
 
-    .gallery {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 15px;
-    }
+.impact h2{
+font-size:40px;
+margin-bottom:15px;
+}
 
-    .gallery img {
-      width: 100%;
-      height: 230px;
-      object-fit: cover;
-      border-radius: 10px;
-    }
+.stats{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:25px;
+margin-top:45px;
+}
 
-    .donate {
-      text-align: center;
-      background: #f5f8f6;
-    }
+.stat{
+padding:20px;
+}
 
-    .donate h2 {
-      color: #0b5d3b;
-      font-size: 38px;
-      margin-bottom: 15px;
-    }
+.stat strong{
+display:block;
+font-size:45px;
+color:#f5c542;
+}
 
-    .contact {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 40px;
-    }
+.gallery{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:18px;
+}
 
-    .contact-box {
-      background: #f5f8f6;
-      padding: 30px;
-      border-radius: 12px;
-    }
+.gallery img{
+width:100%;
+height:260px;
+object-fit:cover;
+border-radius:14px;
+}
 
-    .contact-box h3 {
-      color: #0b5d3b;
-      margin-bottom: 15px;
-    }
+.cta{
+text-align:center;
+background:
+linear-gradient(rgba(0,70,45,.9),rgba(0,70,45,.9)),
+url("https://images.unsplash.com/photo-1532629345422-7515f3d16bb6?auto=format&fit=crop&w=1600&q=80")
+center/cover;
+color:white;
+}
 
-    .contact-box a {
-      color: #0b5d3b;
-      text-decoration: none;
-      font-weight: bold;
-    }
+.cta h2{
+font-size:40px;
+margin-bottom:15px;
+}
 
-    footer {
-      background: #073c27;
-      color: white;
-      text-align: center;
-      padding: 30px 7%;
-    }
+.contact{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:30px;
+}
 
-    footer p {
-      margin: 7px 0;
-    }
+.contact-card{
+background:#f4f8f5;
+padding:35px;
+border-radius:15px;
+}
 
-    @media (max-width: 800px) {
+.contact-card h3{
+color:#075b3a;
+font-size:24px;
+margin-bottom:18px;
+}
 
-      header {
-        flex-direction: column;
-        gap: 10px;
-      }
+.contact-card a{
+color:#075b3a;
+font-weight:bold;
+text-decoration:none;
+}
 
-      nav a {
-        margin: 0 6px;
-        font-size: 13px;
-      }
+footer{
+background:#043b26;
+color:white;
+text-align:center;
+padding:35px 7%;
+}
 
-      .hero h1 {
-        font-size: 40px;
-      }
+footer .logo{
+margin-bottom:10px;
+}
 
-      .hero p {
-        font-size: 17px;
-      }
+@media(max-width:800px){
 
-      .about,
-      .contact {
-        grid-template-columns: 1fr;
-      }
+header{
+padding:15px 5%;
+flex-direction:column;
+gap:12px;
+}
 
-      .cards,
-      .stats,
-      .gallery {
-        grid-template-columns: 1fr;
-      }
+nav{
+gap:12px;
+flex-wrap:wrap;
+justify-content:center;
+}
 
-      section {
-        padding: 55px 6%;
-      }
-    }
-  </style>
+nav a{
+font-size:13px;
+}
+
+.hero{
+min-height:80vh;
+padding:70px 6%;
+}
+
+.hero h1{
+font-size:40px;
+}
+
+.hero p{
+font-size:17px;
+}
+
+.about,
+.contact{
+grid-template-columns:1fr;
+}
+
+.cards,
+.stats,
+.gallery{
+grid-template-columns:1fr;
+}
+
+.about img{
+height:300px;
+}
+
+section{
+padding:60px 6%;
+}
+
+.section-heading h2,
+.impact h2,
+.cta h2{
+font-size:31px;
+}
+
+.gallery img{
+height:250px;
+}
+}
+</style>
 </head>
 
 <body>
 
 <header>
-  <div class="logo">SURVIVOR FOUNDATION</div>
 
-  <nav>
-    <a href="#home">Home</a>
-    <a href="#about">About</a>
-    <a href="#programs">Programs</a>
-    <a href="#gallery">Gallery</a>
-    <a href="#contact">Contact</a>
-  </nav>
+<div class="logo">
+SURVIVOR FOUNDATION
+</div>
+
+<nav>
+<a href="#home">Home</a>
+<a href="#about">About</a>
+<a href="#programs">Programs</a>
+<a href="#gallery">Gallery</a>
+<a href="#contact">Contact</a>
+</nav>
+
 </header>
 
 
 <section class="hero" id="home">
 
-  <div class="hero-content">
+<div class="hero-content">
 
-    <h1>Empowering People. Changing Lives.</h1>
+<div class="badge">
+COMMUNITY • HOPE • IMPACT
+</div>
 
-    <p>
-      Survivor Foundation is committed to supporting vulnerable
-      communities, empowering families and creating opportunities
-      for a brighter and more sustainable future.
-    </p>
+<h1>
+Empowering Communities. Changing Lives.
+</h1>
 
-    <a href="#about" class="btn">Learn More</a>
+<p>
+Survivor Foundation is committed to supporting vulnerable
+communities, creating opportunities and building a future
+where every person can live with dignity and hope.
+</p>
 
-    <a href="#contact" class="btn secondary">Get Involved</a>
+<a href="#about" class="btn">
+Discover Our Work
+</a>
 
-  </div>
+<a href="#contact" class="btn white">
+Partner With Us
+</a>
+
+</div>
 
 </section>
 
 
 <section id="about">
 
-  <div class="section-title">
-    <h2>About Survivor Foundation</h2>
-    <p>Building hope, dignity and opportunity.</p>
-  </div>
+<div class="section-heading">
 
-  <div class="about">
+<h2>About Survivor Foundation</h2>
 
-    <img
-      src="https://images.unsplash.com/photo-1559027615-cd4628902d4a?auto=format&fit=crop&w=1000&q=80"
-      alt="Community support">
+<p>
+Working together to create meaningful and lasting change.
+</p>
 
-    <div>
+</div>
 
-      <h3>Who We Are</h3>
 
-      <p>
-        Survivor Foundation is a community-focused organization
-        dedicated to helping vulnerable people and communities
-        overcome challenges and build better lives.
-      </p>
+<div class="about">
 
-      <br>
+<img
+src="https://images.unsplash.com/photo-1559027615-cd4628902d4a?auto=format&fit=crop&w=1200&q=85"
+alt="Community volunteers">
 
-      <p>
-        Through partnerships, community programs, education,
-        healthcare initiatives and humanitarian support, we work
-        together with communities to create lasting positive change.
-      </p>
+<div>
 
-    </div>
+<h3>Who We Are</h3>
 
-  </div>
+<p>
+Survivor Foundation is a community-focused organization
+working to support vulnerable people and strengthen
+communities through practical and sustainable initiatives.
+</p>
+
+<p>
+We believe that every person deserves dignity, opportunity
+and a chance to build a better future.
+</p>
+
+<div class="check">
+✓ Community empowerment<br>
+✓ Support for vulnerable people<br>
+✓ Education and opportunity<br>
+✓ Health and humanitarian initiatives
+</div>
+
+</div>
+
+</div>
 
 </section>
 
 
 <section class="programs" id="programs">
 
-  <div class="section-title">
+<div class="section-heading">
 
-    <h2>Our Programs</h2>
+<h2>What We Do</h2>
 
-    <p>
-      Our work focuses on practical solutions that create lasting impact.
-    </p>
+<p>
+Our programs focus on creating practical solutions
+for individuals, families and communities.
+</p>
 
-  </div>
-
-
-  <div class="cards">
-
-    <div class="card">
-
-      <div class="icon">❤️</div>
-
-      <h3>Community Support</h3>
-
-      <p>
-        Supporting vulnerable families and communities
-        through humanitarian and social initiatives.
-      </p>
-
-    </div>
+</div>
 
 
-    <div class="card">
+<div class="cards">
 
-      <div class="icon">📚</div>
+<div class="card">
 
-      <h3>Education</h3>
+<div class="icon">❤️</div>
 
-      <p>
-        Promoting access to education and opportunities
-        that help young people reach their potential.
-      </p>
+<h3>Community Support</h3>
 
-    </div>
+<p>
+Supporting vulnerable families and communities
+through humanitarian and social initiatives.
+</p>
 
-
-    <div class="card">
-
-      <div class="icon">🏥</div>
-
-      <h3>Healthcare</h3>
-
-      <p>
-        Supporting initiatives that improve access to
-        essential healthcare and community wellbeing.
-      </p>
-
-    </div>
+</div>
 
 
-    <div class="card">
+<div class="card">
 
-      <div class="icon">🌱</div>
+<div class="icon">📚</div>
 
-      <h3>Economic Empowerment</h3>
+<h3>Education</h3>
 
-      <p>
-        Helping communities develop sustainable
-        opportunities and stronger livelihoods.
-      </p>
+<p>
+Promoting education, skills and opportunities
+for children and young people.
+</p>
 
-    </div>
-
-
-    <div class="card">
-
-      <div class="icon">🤝</div>
-
-      <h3>Partnerships</h3>
-
-      <p>
-        Working with donors, organizations and partners
-        to multiply positive community impact.
-      </p>
-
-    </div>
+</div>
 
 
-    <div class="card">
+<div class="card">
 
-      <div class="icon">🌍</div>
+<div class="icon">🏥</div>
 
-      <h3>Humanitarian Action</h3>
+<h3>Healthcare</h3>
 
-      <p>
-        Responding to community needs with compassion,
-        dignity and practical support.
-      </p>
+<p>
+Supporting initiatives that improve access to
+essential healthcare and wellbeing.
+</p>
 
-    </div>
+</div>
 
-  </div>
+
+<div class="card">
+
+<div class="icon">🌱</div>
+
+<h3>Empowerment</h3>
+
+<p>
+Creating sustainable opportunities that help
+communities become stronger and independent.
+</p>
+
+</div>
+
+
+<div class="card">
+
+<div class="icon">🤝</div>
+
+<h3>Partnerships</h3>
+
+<p>
+Working with donors, organizations and partners
+to increase our impact.
+</p>
+
+</div>
+
+
+<div class="card">
+
+<div class="icon">🌍</div>
+
+<h3>Humanitarian Action</h3>
+
+<p>
+Responding to community needs with compassion,
+dignity and practical support.
+</p>
+
+</div>
+
+</div>
 
 </section>
 
 
 <section class="impact">
 
-  <h2>Together We Can Make A Difference</h2>
+<h2>Together, We Can Create Impact</h2>
 
-  <p>
-    Every contribution, partnership and act of kindness
-    can help create a better future.
-  </p>
+<p>
+Your support, partnership and generosity can help us
+reach more people and create lasting change.
+</p>
 
-  <div class="stats">
+<div class="stats">
 
-    <div class="stat">
-      <h3>01</h3>
-      <p>Community</p>
-    </div>
+<div class="stat">
+<strong>01</strong>
+Community
+</div>
 
-    <div class="stat">
-      <h3>∞</h3>
-      <p>Possibilities</p>
-    </div>
+<div class="stat">
+<strong>∞</strong>
+Possibilities
+</div>
 
-    <div class="stat">
-      <h3>❤️</h3>
-      <p>Hope</p>
-    </div>
+<div class="stat">
+<strong>❤️</strong>
+Hope
+</div>
 
-  </div>
+</div>
 
 </section>
 
 
 <section id="gallery">
 
-  <div class="section-title">
+<div class="section-heading">
 
-    <h2>Our Gallery</h2>
+<h2>Our Gallery</h2>
 
-    <p>
-      Moments from our community work.
-    </p>
+<p>
+A glimpse of community, compassion and service.
+</p>
 
-  </div>
+</div>
 
 
-  <div class="gallery">
+<div class="gallery">
 
-    <img
-      src="https://images.unsplash.com/photo-1469571486292-0ba58a3f068b?auto=format&fit=crop&w=900&q=80"
-      alt="Community volunteers">
+<img
+src="https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?auto=format&fit=crop&w=900&q=85"
+alt="Community">
 
-    <img
-      src="https://images.unsplash.com/photo-1509099836639-18ba1795216d?auto=format&fit=crop&w=900&q=80"
-      alt="Children">
+<img
+src="https://images.unsplash.com/photo-1509099836639-18ba1795216d?auto=format&fit=crop&w=900&q=85"
+alt="Children">
 
-    <img
-      src="https://images.unsplash.com/photo-1532629345422-7515f3d16bb6?auto=format&fit=crop&w=900&q=80"
-      alt="Volunteers">
+<img
+src="https://images.unsplash.com/photo-1532629345422-7515f3d16bb6?auto=format&fit=crop&w=900&q=85"
+alt="Volunteers">
 
-  </div>
+</div>
 
 </section>
 
 
-<section class="donate">
+<section class="cta">
 
-  <h2>Support Our Mission</h2>
+<h2>Be Part of the Change</h2>
 
-  <p>
-    Your support can help us reach more people,
-    strengthen communities and create
+<p>
+Whether you are an individual, company, organization
+or donor, you can help us make a difference.
+</p>
+
+<br>
+
+<a href="#contact" class="btn">
+Become a Partner
+</a>
+
+</section>
+
+
+<section id="contact">
+
+<div class="section-heading">
+
+<h2>Contact Survivor Foundation</h2>
+
+<p>
+Let's work together to build stronger communities.
+</p>
+
+</div>
+
+
+<div class="contact">
+
+<div class="contact-card">
+
+<h3>Get In Touch</h3>
+
+<p>
+📞 Phone
+</p>
+
+<p>
+<a href="tel:+255785129140">
+0785129140
+</a>
+</p>
+
+<br>
+
+<p>
+📧 Email
+</p>
+
+<p>
+<a href="mailto:joshuabaraba2002@gmail.com">
+joshuabaraba2002@gmail.com
+</a>
+</p>
+
+</div>
+
+
+<div class="contact-card">
+
+<h3>Partner With Us</h3>
+
+<p>
+We welcome partnerships with donors, companies,
+organizations and individuals who share our vision.
+</p>
+
+<br>
+
+<a
+class="btn"
+href="mailto:joshuabaraba2002@gmail.com">
+Contact Us
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+
+<footer>
+
+<div class="logo">
+SURVIVOR FOUNDATION
+</div>
+
+<p>
+Empowering Communities • Changing Lives • Creating Hope
+</p>
+
+<p>
+© 2026 Survivor Foundation. All Rights Reserved.
+</p>
+
+</footer>
+
+</body>
+</html>
