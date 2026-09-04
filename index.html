@@ -1,1 +1,527 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+  <title>Survivor Foundation | Empowering Communities, Changing Lives</title>
+
+  <meta name="description"
+    content="Survivor Foundation is committed to empowering vulnerable communities, supporting families and creating opportunities for a better future.">
+
+  <meta name="keywords"
+    content="Survivor Foundation, NGO Tanzania, charity Tanzania, community development, donate Tanzania">
+
+  <meta name="author" content="Survivor Foundation">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      color: #222;
+      background: #fff;
+    }
+
+    header {
+      background: #0b5d3b;
+      color: white;
+      padding: 15px 6%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .logo {
+      font-size: 22px;
+      font-weight: bold;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin-left: 20px;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      opacity: 0.75;
+    }
+
+    .hero {
+      min-height: 90vh;
+      display: flex;
+      align-items: center;
+      padding: 70px 7%;
+      background:
+        linear-gradient(rgba(0,0,0,.55), rgba(0,0,0,.55)),
+        url("https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?auto=format&fit=crop&w=1600&q=80")
+        center/cover;
+      color: white;
+    }
+
+    .hero-content {
+      max-width: 700px;
+    }
+
+    .hero h1 {
+      font-size: 55px;
+      margin-bottom: 20px;
+    }
+
+    .hero p {
+      font-size: 20px;
+      margin-bottom: 30px;
+    }
+
+    .btn {
+      display: inline-block;
+      background: #f4b400;
+      color: #111;
+      padding: 14px 25px;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: bold;
+      margin-right: 10px;
+    }
+
+    .btn.secondary {
+      background: white;
+    }
+
+    section {
+      padding: 75px 7%;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 45px;
+    }
+
+    .section-title h2 {
+      font-size: 36px;
+      color: #0b5d3b;
+      margin-bottom: 10px;
+    }
+
+    .about {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+      align-items: center;
+    }
+
+    .about img {
+      width: 100%;
+      border-radius: 12px;
+    }
+
+    .about h3 {
+      font-size: 30px;
+      margin-bottom: 15px;
+      color: #0b5d3b;
+    }
+
+    .programs {
+      background: #f5f8f6;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 25px;
+    }
+
+    .card {
+      background: white;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 5px 20px rgba(0,0,0,.08);
+      text-align: center;
+    }
+
+    .card .icon {
+      font-size: 45px;
+      margin-bottom: 15px;
+    }
+
+    .card h3 {
+      color: #0b5d3b;
+      margin-bottom: 12px;
+    }
+
+    .impact {
+      background: #0b5d3b;
+      color: white;
+      text-align: center;
+    }
+
+    .impact h2 {
+      font-size: 38px;
+      margin-bottom: 15px;
+    }
+
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 25px;
+      margin-top: 35px;
+    }
+
+    .stat h3 {
+      font-size: 40px;
+      color: #f4b400;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 15px;
+    }
+
+    .gallery img {
+      width: 100%;
+      height: 230px;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+
+    .donate {
+      text-align: center;
+      background: #f5f8f6;
+    }
+
+    .donate h2 {
+      color: #0b5d3b;
+      font-size: 38px;
+      margin-bottom: 15px;
+    }
+
+    .contact {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+    }
+
+    .contact-box {
+      background: #f5f8f6;
+      padding: 30px;
+      border-radius: 12px;
+    }
+
+    .contact-box h3 {
+      color: #0b5d3b;
+      margin-bottom: 15px;
+    }
+
+    .contact-box a {
+      color: #0b5d3b;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    footer {
+      background: #073c27;
+      color: white;
+      text-align: center;
+      padding: 30px 7%;
+    }
+
+    footer p {
+      margin: 7px 0;
+    }
+
+    @media (max-width: 800px) {
+
+      header {
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      nav a {
+        margin: 0 6px;
+        font-size: 13px;
+      }
+
+      .hero h1 {
+        font-size: 40px;
+      }
+
+      .hero p {
+        font-size: 17px;
+      }
+
+      .about,
+      .contact {
+        grid-template-columns: 1fr;
+      }
+
+      .cards,
+      .stats,
+      .gallery {
+        grid-template-columns: 1fr;
+      }
+
+      section {
+        padding: 55px 6%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <div class="logo">SURVIVOR FOUNDATION</div>
+
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#programs">Programs</a>
+    <a href="#gallery">Gallery</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+
+<section class="hero" id="home">
+
+  <div class="hero-content">
+
+    <h1>Empowering People. Changing Lives.</h1>
+
+    <p>
+      Survivor Foundation is committed to supporting vulnerable
+      communities, empowering families and creating opportunities
+      for a brighter and more sustainable future.
+    </p>
+
+    <a href="#about" class="btn">Learn More</a>
+
+    <a href="#contact" class="btn secondary">Get Involved</a>
+
+  </div>
+
+</section>
+
+
+<section id="about">
+
+  <div class="section-title">
+    <h2>About Survivor Foundation</h2>
+    <p>Building hope, dignity and opportunity.</p>
+  </div>
+
+  <div class="about">
+
+    <img
+      src="https://images.unsplash.com/photo-1559027615-cd4628902d4a?auto=format&fit=crop&w=1000&q=80"
+      alt="Community support">
+
+    <div>
+
+      <h3>Who We Are</h3>
+
+      <p>
+        Survivor Foundation is a community-focused organization
+        dedicated to helping vulnerable people and communities
+        overcome challenges and build better lives.
+      </p>
+
+      <br>
+
+      <p>
+        Through partnerships, community programs, education,
+        healthcare initiatives and humanitarian support, we work
+        together with communities to create lasting positive change.
+      </p>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<section class="programs" id="programs">
+
+  <div class="section-title">
+
+    <h2>Our Programs</h2>
+
+    <p>
+      Our work focuses on practical solutions that create lasting impact.
+    </p>
+
+  </div>
+
+
+  <div class="cards">
+
+    <div class="card">
+
+      <div class="icon">❤️</div>
+
+      <h3>Community Support</h3>
+
+      <p>
+        Supporting vulnerable families and communities
+        through humanitarian and social initiatives.
+      </p>
+
+    </div>
+
+
+    <div class="card">
+
+      <div class="icon">📚</div>
+
+      <h3>Education</h3>
+
+      <p>
+        Promoting access to education and opportunities
+        that help young people reach their potential.
+      </p>
+
+    </div>
+
+
+    <div class="card">
+
+      <div class="icon">🏥</div>
+
+      <h3>Healthcare</h3>
+
+      <p>
+        Supporting initiatives that improve access to
+        essential healthcare and community wellbeing.
+      </p>
+
+    </div>
+
+
+    <div class="card">
+
+      <div class="icon">🌱</div>
+
+      <h3>Economic Empowerment</h3>
+
+      <p>
+        Helping communities develop sustainable
+        opportunities and stronger livelihoods.
+      </p>
+
+    </div>
+
+
+    <div class="card">
+
+      <div class="icon">🤝</div>
+
+      <h3>Partnerships</h3>
+
+      <p>
+        Working with donors, organizations and partners
+        to multiply positive community impact.
+      </p>
+
+    </div>
+
+
+    <div class="card">
+
+      <div class="icon">🌍</div>
+
+      <h3>Humanitarian Action</h3>
+
+      <p>
+        Responding to community needs with compassion,
+        dignity and practical support.
+      </p>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<section class="impact">
+
+  <h2>Together We Can Make A Difference</h2>
+
+  <p>
+    Every contribution, partnership and act of kindness
+    can help create a better future.
+  </p>
+
+  <div class="stats">
+
+    <div class="stat">
+      <h3>01</h3>
+      <p>Community</p>
+    </div>
+
+    <div class="stat">
+      <h3>∞</h3>
+      <p>Possibilities</p>
+    </div>
+
+    <div class="stat">
+      <h3>❤️</h3>
+      <p>Hope</p>
+    </div>
+
+  </div>
+
+</section>
+
+
+<section id="gallery">
+
+  <div class="section-title">
+
+    <h2>Our Gallery</h2>
+
+    <p>
+      Moments from our community work.
+    </p>
+
+  </div>
+
+
+  <div class="gallery">
+
+    <img
+      src="https://images.unsplash.com/photo-1469571486292-0ba58a3f068b?auto=format&fit=crop&w=900&q=80"
+      alt="Community volunteers">
+
+    <img
+      src="https://images.unsplash.com/photo-1509099836639-18ba1795216d?auto=format&fit=crop&w=900&q=80"
+      alt="Children">
+
+    <img
+      src="https://images.unsplash.com/photo-1532629345422-7515f3d16bb6?auto=format&fit=crop&w=900&q=80"
+      alt="Volunteers">
+
+  </div>
+
+</section>
+
+
+<section class="donate">
+
+  <h2>Support Our Mission</h2>
+
+  <p>
+    Your support can help us reach more people,
+    strengthen communities and create
