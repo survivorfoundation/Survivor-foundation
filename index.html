@@ -1,1027 +1,999 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <!-- Google Verification -->
-  <meta name="google-site-verification" content="Vc-3mkD3J0JfprZ4PTrnQb-LWGeu6doguaXGTc5q-XI">
-
-  <!-- SEO -->
-  <title>Survivor Foundation | Hope, Strength & Transformation</title>
-
-  <meta name="description" content="Survivor Foundation is a community-focused organization in Tanzania committed to empowering vulnerable people, supporting healthcare and education, strengthening communities, and creating sustainable positive change.">
-
-  <meta name="keywords" content="Survivor Foundation, Tanzania NGO, Tanzania foundation, community development, youth empowerment, education, healthcare, vulnerable communities, charity Tanzania, humanitarian support">
-
-  <meta name="author" content="Survivor Foundation">
-
-  <meta name="robots" content="index, follow">
-  <meta name="theme-color" content="#0b6b4f">
-
-  <!-- Open Graph -->
-  <meta property="og:title" content="Survivor Foundation">
-  <meta property="og:description" content="Hope. Strength. Transformation. Empowering people and building stronger communities.">
-  <meta property="og:type" content="website">
-
-  <style>
-
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      scroll-behavior: smooth;
-    }
-
-    :root {
-      --green: #0b6b4f;
-      --dark-green: #064c39;
-      --light-green: #eaf7f1;
-      --gold: #d8a92e;
-      --dark: #10231d;
-      --text: #52615c;
-      --white: #ffffff;
-      --light: #f6faf8;
-      --border: #dce9e3;
-      --shadow: 0 15px 45px rgba(0,0,0,0.08);
-    }
-
-    body {
-      font-family: Arial, Helvetica, sans-serif;
-      color: var(--text);
-      background: var(--white);
-      line-height: 1.7;
-    }
-
-    a {
-      text-decoration: none;
-      color: inherit;
-    }
-
-    img {
-      max-width: 100%;
-      display: block;
-    }
-
-    .container {
-      width: min(1120px, 92%);
-      margin: auto;
-    }
-
-    /* HEADER */
-
-    .header {
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-      background: rgba(255,255,255,0.97);
-      border-bottom: 1px solid var(--border);
-      backdrop-filter: blur(10px);
-    }
-
-    .nav {
-      min-height: 78px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 20px;
-    }
-
-    .brand img {
-      width: 145px;
-      max-height: 60px;
-      object-fit: contain;
-    }
-
-    .nav-links {
-      display: flex;
-      align-items: center;
-      gap: 22px;
-      font-size: 14px;
-      font-weight: bold;
-    }
-
-    .nav-links a {
-      transition: 0.3s;
-    }
-
-    .nav-links a:hover {
-      color: var(--green);
-    }
-
-    .donate-btn {
-      background: var(--green);
-      color: white !important;
-      padding: 11px 19px;
-      border-radius: 30px;
-    }
-
-    .donate-btn:hover {
-      background: var(--dark-green);
-      transform: translateY(-2px);
-    }
-
-    .menu-toggle {
-      display: none;
-      border: none;
-      background: none;
-      font-size: 28px;
-      cursor: pointer;
-      color: var(--dark);
-    }
-
-    /* HERO */
-
-    .hero {
-      min-height: 650px;
-      display: flex;
-      align-items: center;
-      position: relative;
-      overflow: hidden;
-      background:
-        linear-gradient(90deg, rgba(5,45,34,0.95), rgba(5,45,34,0.68), rgba(5,45,34,0.25)),
-        url("IMG-20250809-WA0014-1.jpg") center/cover;
-    }
-
-    .hero-content {
-      padding: 100px 0;
-    }
-
-    .hero-text {
-      max-width: 700px;
-      color: white;
-    }
-
-    .eyebrow {
-      color: var(--gold);
-      font-size: 13px;
-      letter-spacing: 2px;
-      font-weight: bold;
-      margin-bottom: 12px;
-      text-transform: uppercase;
-    }
-
-    .hero h1 {
-      font-size: clamp(45px, 7vw, 76px);
-      line-height: 1.05;
-      margin-bottom: 25px;
-    }
-
-    .hero h1 span {
-      color: #f1ca58;
-    }
-
-    .lead {
-      font-size: 19px;
-      max-width: 650px;
-      color: #f1f7f4;
-      margin-bottom: 35px;
-    }
-
-    .hero-buttons {
-      display: flex;
-      gap: 15px;
-      flex-wrap: wrap;
-    }
-
-    .btn {
-      display: inline-block;
-      padding: 13px 25px;
-      border-radius: 30px;
-      font-weight: bold;
-      border: 2px solid transparent;
-      transition: 0.3s;
-      cursor: pointer;
-    }
-
-    .btn.primary {
-      background: var(--gold);
-      color: #17200d;
-    }
-
-    .btn.primary:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 10px 25px rgba(0,0,0,0.2);
-    }
-
-    .btn.secondary {
-      border-color: white;
-      color: white;
-    }
-
-    .btn.secondary:hover {
-      background: white;
-      color: var(--dark-green);
-    }
-
-    /* SECTIONS */
-
-    .section {
-      padding: 90px 0;
-    }
-
-    .section.light {
-      background: var(--light);
-    }
-
-    .section-heading {
-      text-align: center;
-      max-width: 720px;
-      margin: 0 auto 50px;
-    }
-
-    h2 {
-      color: var(--dark);
-      font-size: clamp(32px, 5vw, 48px);
-      line-height: 1.15;
-      margin-bottom: 18px;
-    }
-
-    h3 {
-      color: var(--dark);
-      margin-bottom: 10px;
-    }
-
-    /* ABOUT */
-
-    .two-col {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 60px;
-      align-items: center;
-    }
-
-    .about-text p {
-      margin-bottom: 18px;
-    }
-
-    .info-card {
-      background: var(--light-green);
-      padding: 38px;
-      border-radius: 22px;
-      border-left: 5px solid var(--green);
-      box-shadow: var(--shadow);
-    }
-
-    .info-card h3 {
-      color: var(--green);
-      margin-top: 5px;
-    }
-
-    .info-card p {
-      margin-bottom: 25px;
-    }
-
-    /* VALUES */
-
-    .values {
-      margin-top: 45px;
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 18px;
-    }
-
-    .value {
-      padding: 25px 18px;
-      background: white;
-      border: 1px solid var(--border);
-      border-radius: 15px;
-      text-align: center;
-    }
-
-    .value-icon {
-      font-size: 30px;
-      margin-bottom: 10px;
-    }
-
-    .value h3 {
-      font-size: 17px;
-    }
-
-    /* OBJECTIVES */
-
-    .objectives {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 20px;
-    }
-
-    .objective {
-      padding: 28px;
-      border: 1px solid var(--border);
-      border-radius: 18px;
-      background: white;
-      box-shadow: 0 5px 20px rgba(0,0,0,0.03);
-    }
-
-    .objective span {
-      color: var(--green);
-      font-size: 25px;
-      font-weight: bold;
-    }
-
-    /* PROGRAMS */
-
-    .cards {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 22px;
-    }
-
-    .card {
-      background: white;
-      padding: 30px 23px;
-      border-radius: 18px;
-      border: 1px solid var(--border);
-      transition: 0.3s;
-      box-shadow: 0 8px 25px rgba(0,0,0,0.04);
-    }
-
-    .card:hover {
-      transform: translateY(-7px);
-      box-shadow: var(--shadow);
-    }
-
-    .icon {
-      font-size: 40px;
-      margin-bottom: 15px;
-    }
-
-    .card h3 {
-      font-size: 21px;
-    }
-
-    /* IMPACT */
-
-    .impact {
-      background:
-        linear-gradient(rgba(6,76,57,0.96), rgba(6,76,57,0.96)),
-        url("IMG-20250809-WA0044.jpg") center/cover;
-      color: white;
-    }
-
-    .impact h2 {
-      color: white;
-    }
-
-    .impact .eyebrow {
-      color: #f1ca58;
-    }
-
-    .stats {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 20px;
-      margin-top: 45px;
-    }
-
-    .stats div {
-      text-align: center;
-      padding: 30px 10px;
-      border: 1px solid rgba(255,255,255,0.2);
-      border-radius: 18px;
-    }
-
-    .stats strong {
-      display: block;
-      font-size: 42px;
-      color: #f1ca58;
-    }
-
-    .stats span {
-      color: #e5eee9;
-    }
-
-    .note {
-      text-align: center;
-      margin-top: 30px;
-      opacity: 0.8;
-      font-size: 13px;
-    }
-
-    /* GET INVOLVED */
-
-    .involvement-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 22px;
-    }
-
-    .involvement {
-      padding: 32px;
-      border-radius: 18px;
-      background: var(--light);
-      border: 1px solid var(--border);
-    }
-
-    .involvement h3 {
-      color: var(--green);
-    }
-
-    /* DONATE */
-
-    .donate-section {
-      background: var(--light-green);
-    }
-
-    .donate-box {
-      background: var(--green);
-      color: white;
-      padding: 55px;
-      border-radius: 25px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 30px;
-    }
-
-    .donate-box h2 {
-      color: white;
-    }
-
-    .donate-box p {
-      max-width: 650px;
-    }
-
-    /* GALLERY */
-
-    .gallery {
-      padding: 90px 0;
-    }
-
-    .gallery-grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 15px;
-    }
-
-    .gallery-grid img {
-      width: 100%;
-      height: 240px;
-      object-fit: cover;
-      border-radius: 14px;
-      transition: 0.3s;
-    }
-
-    .gallery-grid img:hover {
-      transform: scale(1.03);
-    }
-
-    /* CONTACT */
-
-    .contact-details {
-      margin-top: 25px;
-    }
-
-    .contact-details p {
-      margin-bottom: 12px;
-    }
-
-    .contact-details strong {
-      color: var(--dark);
-    }
-
-    .contact-form {
-      display: grid;
-      gap: 15px;
-      background: var(--light);
-      padding: 30px;
-      border-radius: 20px;
-      border: 1px solid var(--border);
-    }
-
-    .contact-form input,
-    .contact-form textarea {
-      width: 100%;
-      padding: 15px;
-      border: 1px solid var(--border);
-      border-radius: 10px;
-      font: inherit;
-      outline: none;
-    }
-
-    .contact-form input:focus,
-    .contact-form textarea:focus {
-      border-color: var(--green);
-    }
-
-    /* FOOTER */
-
-    .footer {
-      background: #062f24;
-      color: #d7e6df;
-      padding: 55px 0 25px;
-    }
-
-    .footer-grid {
-      display: grid;
-      grid-template-columns: 1.4fr 1fr 1fr;
-      gap: 40px;
-      margin-bottom: 40px;
-    }
-
-    .footer-logo {
-      width: 145px;
-      margin-bottom: 20px;
-      filter: brightness(0) invert(1);
-    }
-
-    .footer h3 {
-      color: white;
-      margin-bottom: 15px;
-    }
-
-    .footer a:hover {
-      color: #f1ca58;
-    }
-
-    .footer-bottom {
-      border-top: 1px solid rgba(255,255,255,0.12);
-      padding-top: 22px;
-      display: flex;
-      justify-content: space-between;
-      gap: 15px;
-      flex-wrap: wrap;
-      font-size: 13px;
-    }
-
-    /* MOBILE */
-
-    @media (max-width: 900px) {
-
-      .nav-links {
-        position: absolute;
-        top: 78px;
-        left: 0;
-        width: 100%;
-        background: white;
-        display: none;
-        flex-direction: column;
-        padding: 25px;
-        border-bottom: 1px solid var(--border);
-      }
-
-      .nav-links.active {
-        display: flex;
-      }
-
-      .menu-toggle {
-        display: block;
-      }
-
-      .two-col,
-      .footer-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .cards {
-        grid-template-columns: repeat(2, 1fr);
-      }
-
-      .values {
-        grid-template-columns: repeat(2, 1fr);
-      }
-
-      .stats {
-        grid-template-columns: repeat(2, 1fr);
-      }
-
-      .gallery-grid {
-        grid-template-columns: repeat(2, 1fr);
-      }
-
-      .donate-box {
-        flex-direction: column;
-        align-items: flex-start;
-      }
-
-      .involvement-grid {
-        grid-template-columns: 1fr;
-      }
-    }
-
-    @media (max-width: 600px) {
-
-      .hero {
-        min-height: 620px;
-      }
-
-      .hero h1 {
-        font-size: 43px;
-      }
-
-      .lead {
-        font-size: 17px;
-      }
-
-      .section {
-        padding: 65px 0;
-      }
-
-      .cards,
-      .objectives,
-      .values,
-      .stats,
-      .gallery-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .gallery-grid img {
-        height: 260px;
-      }
-
-      .donate-box {
-        padding: 35px 25px;
-      }
-
-      .footer-bottom {
-        flex-direction: column;
-      }
-    }
-
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Survivor Foundation | Hope, Strength & Transformation</title>
+
+<meta name="description" content="Survivor Foundation is a community-focused organization in Tanzania committed to empowering vulnerable people, supporting education, healthcare, youth and sustainable community development.">
+
+<meta name="keywords" content="Survivor Foundation, Tanzania Foundation, Tanzania NGO, community development, youth empowerment, education, healthcare, charity Tanzania">
+
+<meta name="author" content="Survivor Foundation">
+
+<meta name="google-site-verification" content="Vc-3mkD3J0JfprZ4PTrnQb-LWGeu6doguaXGTc5q-XI">
+
+<meta property="og:title" content="Survivor Foundation">
+<meta property="og:description" content="Hope, Strength & Transformation">
+<meta property="og:type" content="website">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:Arial,Helvetica,sans-serif;
+    line-height:1.6;
+    color:#222;
+    background:#fff;
+}
+
+a{
+    text-decoration:none;
+}
+
+.container{
+    width:90%;
+    max-width:1150px;
+    margin:auto;
+}
+
+/* HEADER */
+header{
+    background:#ffffff;
+    position:sticky;
+    top:0;
+    z-index:1000;
+    box-shadow:0 2px 10px rgba(0,0,0,.08);
+}
+
+.navbar{
+    min-height:75px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.logo{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    font-size:22px;
+    font-weight:bold;
+    color:#123b63;
+}
+
+.logo img{
+    width:50px;
+    height:50px;
+    object-fit:contain;
+}
+
+.nav-links{
+    display:flex;
+    list-style:none;
+    gap:24px;
+}
+
+.nav-links a{
+    color:#222;
+    font-weight:bold;
+    transition:.3s;
+}
+
+.nav-links a:hover{
+    color:#1677b8;
+}
+
+.menu-btn{
+    display:none;
+    font-size:28px;
+    cursor:pointer;
+}
+
+/* HERO */
+.hero{
+    min-height:650px;
+    background:
+    linear-gradient(rgba(0,35,65,.65),rgba(0,35,65,.65)),
+    url("IMG-20250809-WA0014-1.jpg") center/cover;
+    display:flex;
+    align-items:center;
+    text-align:center;
+    color:white;
+}
+
+.hero-content{
+    max-width:850px;
+    margin:auto;
+}
+
+.hero h1{
+    font-size:52px;
+    margin-bottom:20px;
+}
+
+.hero p{
+    font-size:21px;
+    margin-bottom:30px;
+}
+
+.btn{
+    display:inline-block;
+    padding:13px 25px;
+    border-radius:30px;
+    background:#f5a623;
+    color:white;
+    font-weight:bold;
+    margin:6px;
+    transition:.3s;
+}
+
+.btn:hover{
+    transform:translateY(-3px);
+    opacity:.9;
+}
+
+.btn-outline{
+    background:transparent;
+    border:2px solid white;
+}
+
+/* GENERAL */
+section{
+    padding:75px 0;
+}
+
+.section-title{
+    text-align:center;
+    margin-bottom:45px;
+}
+
+.section-title h2{
+    font-size:35px;
+    color:#123b63;
+    margin-bottom:10px;
+}
+
+.section-title p{
+    color:#666;
+}
+
+/* ABOUT */
+.about{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:45px;
+    align-items:center;
+}
+
+.about img{
+    width:100%;
+    border-radius:15px;
+}
+
+.about h3{
+    color:#1677b8;
+    font-size:28px;
+    margin-bottom:15px;
+}
+
+.about p{
+    margin-bottom:15px;
+}
+
+/* CARDS */
+.cards{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:25px;
+}
+
+.card{
+    background:#fff;
+    padding:30px 25px;
+    border-radius:15px;
+    box-shadow:0 5px 20px rgba(0,0,0,.08);
+    text-align:center;
+    transition:.3s;
+}
+
+.card:hover{
+    transform:translateY(-7px);
+}
+
+.card-icon{
+    font-size:42px;
+    margin-bottom:15px;
+}
+
+.card h3{
+    color:#123b63;
+    margin-bottom:10px;
+}
+
+/* MISSION */
+.mission-section{
+    background:#f5f8fb;
+}
+
+.mission-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:25px;
+}
+
+.mission-box{
+    padding:35px;
+    background:white;
+    border-radius:15px;
+    box-shadow:0 5px 18px rgba(0,0,0,.07);
+}
+
+.mission-box h3{
+    color:#1677b8;
+    margin-bottom:12px;
+}
+
+/* OBJECTIVES */
+.objectives{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:18px;
+}
+
+.objective{
+    padding:20px;
+    background:#f5f8fb;
+    border-left:5px solid #1677b8;
+    border-radius:8px;
+}
+
+.objective strong{
+    color:#123b63;
+}
+
+/* IMPACT */
+.impact{
+    background:
+    linear-gradient(rgba(0,35,65,.78),rgba(0,35,65,.78)),
+    url("IMG-20250809-WA0044.jpg") center/cover;
+    color:white;
+    text-align:center;
+}
+
+.impact h2{
+    font-size:36px;
+    margin-bottom:35px;
+}
+
+.impact-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:20px;
+}
+
+.impact-box h3{
+    font-size:38px;
+}
+
+.impact-box p{
+    font-size:17px;
+}
+
+/* INVOLVEMENT */
+.involve{
+    background:#f5f8fb;
+}
+
+/* DONATE */
+.donate{
+    background:#123b63;
+    color:white;
+    text-align:center;
+}
+
+.donate h2{
+    font-size:38px;
+    margin-bottom:15px;
+}
+
+.donate p{
+    max-width:750px;
+    margin:0 auto 25px;
+}
+
+/* GALLERY */
+.gallery{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:15px;
+}
+
+.gallery img{
+    width:100%;
+    height:220px;
+    object-fit:cover;
+    border-radius:10px;
+    transition:.3s;
+}
+
+.gallery img:hover{
+    transform:scale(1.03);
+}
+
+/* CONTACT */
+.contact{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:40px;
+}
+
+.contact-info h3{
+    color:#123b63;
+    margin-bottom:15px;
+}
+
+.contact-item{
+    margin:18px 0;
+}
+
+.contact-item strong{
+    color:#1677b8;
+}
+
+form{
+    background:#f5f8fb;
+    padding:30px;
+    border-radius:15px;
+}
+
+input,
+textarea{
+    width:100%;
+    padding:13px;
+    margin-bottom:15px;
+    border:1px solid #ddd;
+    border-radius:7px;
+    font-family:inherit;
+}
+
+textarea{
+    height:130px;
+    resize:vertical;
+}
+
+form button{
+    border:none;
+    cursor:pointer;
+    font-size:16px;
+}
+
+/* FOOTER */
+footer{
+    background:#0b2945;
+    color:white;
+    padding:35px 0;
+    text-align:center;
+}
+
+footer p{
+    margin:7px 0;
+}
+
+.social{
+    margin:15px 0;
+}
+
+.social a{
+    color:white;
+    margin:0 10px;
+    font-weight:bold;
+}
+
+/* MOBILE */
+@media(max-width:800px){
+
+    .nav-links{
+        display:none;
+        position:absolute;
+        top:75px;
+        left:0;
+        width:100%;
+        background:white;
+        flex-direction:column;
+        text-align:center;
+        padding:20px;
+        box-shadow:0 5px 10px rgba(0,0,0,.1);
+    }
+
+    .nav-links.active{
+        display:flex;
+    }
+
+    .menu-btn{
+        display:block;
+    }
+
+    .hero{
+        min-height:560px;
+    }
+
+    .hero h1{
+        font-size:38px;
+    }
+
+    .hero p{
+        font-size:18px;
+    }
+
+    .about,
+    .contact{
+        grid-template-columns:1fr;
+    }
+
+    .cards,
+    .mission-grid{
+        grid-template-columns:1fr;
+    }
+
+    .objectives{
+        grid-template-columns:1fr;
+    }
+
+    .impact-grid{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .gallery{
+        grid-template-columns:1fr 1fr;
+    }
+}
+
+@media(max-width:500px){
+
+    .hero h1{
+        font-size:32px;
+    }
+
+    .impact-grid,
+    .gallery{
+        grid-template-columns:1fr;
+    }
+
+    .gallery img{
+        height:250px;
+    }
+}
+</style>
 </head>
 
 <body>
 
 <!-- HEADER -->
+<header>
+<div class="container navbar">
 
-<header class="header">
+<a href="#home" class="logo">
+<img src="logo.png" alt="Survivor Foundation Logo">
+<span>Survivor Foundation</span>
+</a>
 
-  <div class="container nav">
+<div class="menu-btn" onclick="toggleMenu()">☰</div>
 
-    <a href="#home" class="brand">
-      <img src="logo.png" alt="Survivor Foundation Logo">
-    </a>
+<ul class="nav-links" id="navLinks">
+<li><a href="#home">Home</a></li>
+<li><a href="#about">About</a></li>
+<li><a href="#mission">Mission</a></li>
+<li><a href="#programs">Programs</a></li>
+<li><a href="#gallery">Gallery</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
 
-    <button class="menu-toggle" aria-label="Open Menu">
-      ☰
-    </button>
-
-    <nav class="nav-links">
-
-      <a href="#home">Home</a>
-      <a href="#about">About Us</a>
-      <a href="#programs">Programs</a>
-      <a href="#impact">Our Impact</a>
-      <a href="#gallery">Gallery</a>
-      <a href="#contact">Contact</a>
-      <a href="#donate" class="donate-btn">Support Us</a>
-
-    </nav>
-
-  </div>
-
+</div>
 </header>
 
 
-<main>
-
 <!-- HERO -->
+<section class="hero" id="home">
+<div class="container hero-content">
 
-<section id="home" class="hero">
+<h1>Hope, Strength & Transformation</h1>
 
-  <div class="container hero-content">
+<p>
+Empowering vulnerable people and communities to build a better,
+healthier and more sustainable future.
+</p>
 
-    <div class="hero-text">
+<a href="#about" class="btn">Learn More</a>
+<a href="#contact" class="btn btn-outline">Get Involved</a>
 
-      <p class="eyebrow">
-        SURVIVOR FOUNDATION
-      </p>
-
-      <h1>
-        Hope. Strength.<br>
-        <span>Transformation.</span>
-      </h1>
-
-      <p class="lead">
-        Empowering vulnerable people, strengthening communities,
-        and creating opportunities for a better and more sustainable future.
-      </p>
-
-      <div class="hero-buttons">
-
-        <a href="#donate" class="btn primary">
-          Support Our Work
-        </a>
-
-        <a href="#about" class="btn secondary">
-          Learn About Us
-        </a>
-
-      </div>
-
-    </div>
-
-  </div>
-
+</div>
 </section>
 
 
 <!-- ABOUT -->
+<section id="about">
+<div class="container">
 
-<section id="about" class="section">
+<div class="section-title">
+<h2>About Survivor Foundation</h2>
+<p>Creating positive change through compassion and action.</p>
+</div>
 
-  <div class="container">
+<div class="about">
 
-    <div class="two-col">
+<img src="IMG-20250809-WA0014-1.jpg" alt="Survivor Foundation Community">
 
-      <div class="about-text">
+<div>
+<h3>Who We Are</h3>
 
-        <p class="eyebrow">
-          WHO WE ARE
-        </p>
+<p>
+Survivor Foundation is a community-focused organization committed
+to supporting vulnerable people and strengthening communities.
+</p>
 
-        <h2>
-          Building stronger communities and brighter futures.
-        </h2>
+<p>
+We believe that every person deserves dignity, opportunity,
+hope and the chance to build a better future.
+</p>
 
-        <p>
-          Survivor Foundation is a community-focused organization
-          committed to supporting vulnerable people, empowering individuals,
-          and strengthening communities through practical and sustainable
-          initiatives.
-        </p>
+<p>
+Through education, healthcare initiatives, community support,
+youth empowerment and strategic partnerships, we work to create
+sustainable positive change.
+</p>
 
-        <p>
-          We believe that every person deserves dignity, opportunity,
-          hope, and the chance to contribute positively to their community.
-        </p>
+<a href="#programs" class="btn">Our Programs</a>
 
-        <p>
-          Through collaboration with communities, volunteers, donors,
-          institutions, and development partners, we work to transform
-          challenges into opportunities for meaningful change.
-        </p>
+</div>
 
-      </div>
-
-
-      <div class="info-card">
-
-        <h3>Our Mission</h3>
-
-        <p>
-          To empower vulnerable people and communities through access to
-          support, opportunities, education, healthcare initiatives,
-          partnerships, and sustainable community development.
-        </p>
-
-        <h3>Our Vision</h3>
-
-        <p>
-          A resilient and inclusive society where every person has the
-          opportunity to live with dignity, hope, purpose, and equal
-          opportunities for a better future.
-        </p>
-
-        <h3>Our Purpose</h3>
-
-        <p>
-          To turn compassion into action and create sustainable solutions
-          that improve lives and strengthen communities.
-        </p>
-
-      </div>
-
-    </div>
+</div>
+</div>
+</section>
 
 
-    <!-- VALUES -->
+<!-- MISSION VISION PURPOSE -->
+<section class="mission-section" id="mission">
+<div class="container">
 
-    <div class="section-heading" style="margin-top:80px;">
+<div class="section-title">
+<h2>Mission, Vision & Purpose</h2>
+<p>The principles that guide our work.</p>
+</div>
 
-      <p class="eyebrow">
-        WHAT GUIDES US
-      </p>
+<div class="mission-grid">
 
-      <h2>
-        Our Core Values
-      </h2>
+<div class="mission-box">
+<h3>Our Mission</h3>
+<p>
+To empower vulnerable people and communities through access to
+support, opportunities, education, healthcare initiatives,
+partnerships and sustainable community development.
+</p>
+</div>
 
-    </div>
+<div class="mission-box">
+<h3>Our Vision</h3>
+<p>
+A resilient and inclusive society where every person has the
+opportunity to live with dignity, hope, purpose and equal
+opportunities for a better future.
+</p>
+</div>
 
-    <div class="values">
+<div class="mission-box">
+<h3>Our Purpose</h3>
+<p>
+To turn compassion into action and create sustainable solutions
+that improve lives and strengthen communities.
+</p>
+</div>
 
-      <div class="value">
-        <div class="value-icon">❤️</div>
-        <h3>Compassion</h3>
-        <p>We care about people and respond to community needs with empathy.</p>
-      </div>
+</div>
+</div>
+</section>
 
-      <div class="value">
-        <div class="value-icon">🤝</div>
-        <h3>Partnership</h3>
-        <p>We believe lasting change is achieved by working together.</p>
-      </div>
 
-      <div class="value">
-        <div class="value-icon">⚖️</div>
-        <h3>Integrity</h3>
-        <p>We promote honesty, accountability, transparency, and responsibility.</p>
-      </div>
+<!-- VALUES -->
+<section>
+<div class="container">
 
-      <div class="value">
-        <div class="value-icon">🌱</div>
-        <h3>Sustainability</h3>
-        <p>We focus on solutions that create lasting positive impact.</p>
-      </div>
+<div class="section-title">
+<h2>Our Core Values</h2>
+<p>Values that shape everything we do.</p>
+</div>
 
-    </div>
+<div class="cards">
 
-  </div>
+<div class="card">
+<div class="card-icon">❤️</div>
+<h3>Compassion</h3>
+<p>We care about people and respond to community needs with empathy.</p>
+</div>
 
+<div class="card">
+<div class="card-icon">🤝</div>
+<h3>Partnership</h3>
+<p>We believe collaboration creates stronger and lasting solutions.</p>
+</div>
+
+<div class="card">
+<div class="card-icon">🛡️</div>
+<h3>Integrity</h3>
+<p>We promote honesty, accountability and responsible action.</p>
+</div>
+
+<div class="card">
+<div class="card-icon">🌱</div>
+<h3>Sustainability</h3>
+<p>We focus on solutions that create long-term positive impact.</p>
+</div>
+
+</div>
+</div>
 </section>
 
 
 <!-- OBJECTIVES -->
+<section class="mission-section">
+<div class="container">
 
-<section class="section light">
+<div class="section-title">
+<h2>Our Objectives</h2>
+<p>Areas where we aim to create meaningful change.</p>
+</div>
 
-  <div class="container">
+<div class="objectives">
 
-    <div class="section-heading">
+<div class="objective">
+<strong>01. Support Vulnerable People</strong>
+<p>Provide support and opportunities for people facing difficult circumstances.</p>
+</div>
 
-      <p class="eyebrow">
-        OUR OBJECTIVES
-      </p>
+<div class="objective">
+<strong>02. Promote Education</strong>
+<p>Support access to education and learning opportunities.</p>
+</div>
 
-      <h2>
-        What We Aim to Achieve
-      </h2>
+<div class="objective">
+<strong>03. Improve Community Health</strong>
+<p>Support healthcare awareness and community health initiatives.</p>
+</div>
 
-      <p>
-        Our work focuses on practical interventions that improve lives,
-        create opportunities, and strengthen communities.
-      </p>
+<div class="objective">
+<strong>04. Empower Communities</strong>
+<p>Strengthen communities through sustainable development initiatives.</p>
+</div>
 
-    </div>
+<div class="objective">
+<strong>05. Youth Opportunities</strong>
+<p>Encourage skills, opportunities and positive development for young people.</p>
+</div>
 
+<div class="objective">
+<strong>06. Build Partnerships</strong>
+<p>Work with donors, organizations and community stakeholders.</p>
+</div>
 
-    <div class="objectives">
-
-      <div class="objective">
-        <span>01</span>
-        <h3>Support Vulnerable People</h3>
-        <p>
-          Provide appropriate support and opportunities to individuals
-          and families facing social and economic challenges.
-        </p>
-      </div>
-
-      <div class="objective">
-        <span>02</span>
-        <h3>Promote Education</h3>
-        <p>
-          Encourage access to education and opportunities that help young
-          people develop skills and build brighter futures.
-        </p>
-      </div>
-
-      <div class="objective">
-        <span>03</span>
-        <h3>Improve Community Health</h3>
-        <p>
-          Support community health awareness and initiatives that promote
-          healthier and more resilient communities.
-        </p>
-      </div>
-
-      <div class="objective">
-        <span>04</span>
-        <h3>Empower Communities</h3>
-        <p>
-          Support communities to identify challenges, develop solutions,
-          and participate actively in their own development.
-        </p>
-      </div>
-
-      <div class="objective">
-        <span>05</span>
-        <h3>Promote Youth Opportunities</h3>
-        <p>
-          Encourage young people to develop skills, confidence,
-          leadership, and opportunities for positive participation.
-        </p>
-      </div>
-
-      <div class="objective">
-        <span>06</span>
-        <h3>Build Strategic Partnerships</h3>
-        <p>
-          Work with donors, organizations, institutions, volunteers,
-          and other partners to expand sustainable community impact.
-        </p>
-      </div>
-
-    </div>
-
-  </div>
-
+</div>
+</div>
 </section>
 
 
 <!-- PROGRAMS -->
+<section id="programs">
+<div class="container">
 
-<section id="programs" class="section">
+<div class="section-title">
+<h2>Our Programs</h2>
+<p>Working together to improve lives and communities.</p>
+</div>
 
-  <div class="container">
+<div class="cards">
 
-    <div class="section-heading">
+<div class="card">
+<div class="card-icon">🏥</div>
+<h3>Healthcare</h3>
+<p>
+Supporting healthcare awareness, access and community health initiatives.
+</p>
+</div>
 
-      <p class="eyebrow">
-        OUR WORK
-      </p>
+<div class="card">
+<div class="card-icon">📚</div>
+<h3>Education</h3>
+<p>
+Promoting education and learning opportunities for vulnerable communities.
+</p>
+</div>
 
-      <h2>
-        Programs & Areas of Focus
-      </h2>
+<div class="card">
+<div class="card-icon">🏘️</div>
+<h3>Community Support</h3>
+<p>
+Providing community-based support and practical assistance.
+</p>
+</div>
 
-      <p>
-        We focus on areas that contribute to healthier, stronger,
-        more empowered, and resilient communities.
-      </p>
+<div class="card">
+<div class="card-icon">🌍</div>
+<h3>Community Development</h3>
+<p>
+Encouraging sustainable development and stronger communities.
+</p>
+</div>
 
-    </div>
+<div class="card">
+<div class="card-icon">👥</div>
+<h3>Youth Empowerment</h3>
+<p>
+Encouraging young people to develop skills and pursue opportunities.
+</p>
+</div>
 
+<div class="card">
+<div class="card-icon">💡</div>
+<h3>Skills & Opportunities</h3>
+<p>
+Encouraging practical skills and opportunities that can improve livelihoods.
+</p>
+</div>
 
-    <div class="cards">
-
-      <article class="card">
-
-        <div class="icon">🏥</div>
-
-        <h3>Healthcare</h3>
-
-        <p>
-          Supporting community health initiatives, health awareness,
-          and improved access to essential healthcare support.
-        </p>
-
-      </article>
-
-
-      <article class="card">
-
-        <div class="icon">🎓</div>
-
-        <h3>Education</h3>
-
-        <p>
-          Promoting education and learning opportunities that help
-          children and young people build better futures.
-        </p>
-
-      </article>
-
-
-      <article class="card">
-
-        <div class="icon">👥</div>
-
-        <h3>Community Support</h3>
-
-        <p>
-          Working with communities to identify needs and develop
-          practical responses that improve people's lives.
-        </p>
-
-      </article>
+</div>
+</div>
+</section>
 
 
-      <article class="card">
+<!-- IMPACT -->
+<section class="impact">
+<div class="container">
 
-        <div class="icon">🌱</div>
+<h2>Our Commitment to Impact</h2>
 
-        <h3>Community Development</h3>
+<div class="impact-grid">
 
-        <p>
-          Supporting sustainable initiatives that strengthen families,
-          livelihoods, resilience, and community development.
-        </p>
+<div class="impact-box">
+<h3>People</h3>
+<p>Putting people at the center of our work.</p>
+</div>
 
-      </article>
+<div class="impact-box">
+<h3>Hope</h3>
+<p>Creating hope through meaningful action.</p>
+</div>
+
+<div class="impact-box">
+<h3>Action</h3>
+<p>Turning ideas and compassion into action.</p>
+</div>
+
+<div class="impact-box">
+<h3>Future</h3>
+<p>Building sustainable opportunities for tomorrow.</p>
+</div>
+
+</div>
+
+</div>
+</section>
 
 
-      <article class="card">
+<!-- GET INVOLVED -->
+<section class="involve">
+<div class="container">
 
-        <div class="icon">🧑‍🎓</div>
+<div class="section-title">
+<h2>Get Involved</h2>
+<p>You can be part of the change.</p>
+</div>
 
-        <h3>Youth Empowerment</h3>
+<div class="cards">
 
-        <p>
-          Creating opportunities that help young people gain skills,
-          confidence, leadership, and positive direction.
-        </p>
+<div class="card">
+<div class="card-icon">💰</div>
+<h3>Become a Donor</h3>
+<p>
+Your support can help us reach more people and communities.
+</p>
+<a href="#contact" class="btn">Support Us</a>
+</div>
 
-      </article>
+<div class="card">
+<div class="card-icon">🤝</div>
+<h3>Become a Partner</h3>
+<p>
+Partner with Survivor Foundation to create sustainable solutions.
+</p>
+<a href="#contact" class="btn">Partner With Us</a>
+</div>
+
+<div class="card">
+<div class="card-icon">🙋</div>
+<h3>Volunteer</h3>
+<p>
+Join our efforts and contribute your skills and time to our mission.
+</p>
+<a href="#contact" class="btn">Contact Us</a>
+</div>
+
+</div>
+</div>
+</section>
 
 
-      <article class="card">
+<!-- DONATE -->
+<section class="donate">
+<div class="container">
 
-        <div class="icon">💡</div>
+<h2>Your Support Can Change a Life</h2>
 
-        <h3>Skills & Opportunities</h3>
+<p>
+Every contribution, partnership and act of service can help create
+hope and opportunities for vulnerable people and communities.
+</p>
 
-        <p>
-          Encouraging practical skills and opportunities that ca
+<a href="#contact" class="btn">Become a Donor</a>
+
+</div>
+</section>
+
+
+<!-- GALLERY -->
+<section id="gallery">
+<div class="container">
+
+<div class="section-title">
+<h2>Our Gallery</h2>
+<p>Moments from our community journey.</p>
+</div>
+
+<div class="gallery">
+
+<img src="IMG-20250809-WA0014-1.jpg" alt="Survivor Foundation">
+
+<img src="AIMG-20250809-WAO034-1.jpg" alt="Community Activity">
+
+<img src="IMG-20250809-WA0044.jpg" alt="Community Support">
+
+<img src="IMG-20250809-WA0059.jpg" alt="Survivor Foundation Activity">
+
+<img src="IMG-20250809-WA0062.jpg" alt="Community Work">
+
+<img src="PXL_20240224_114137728.PORTRAIT.ORIGINAL-1.jpg" alt="Community Member">
+
+<img src="PXL_20250831_114124245.PORTRAIT.jpg" alt="Community Activity">
+
+<img src="PXL20250831_114429948.PORTRAIT.ORIGINAL-1.jpg" alt="Survivor Foundation">
+
+</div>
+
+</div>
+</section>
+
+
+<!-- CONTACT -->
+<section id="contact" class="mission-section">
+<div class="container">
+
+<div class="section-title">
+<h2>Contact Us</h2>
+<p>We would love to hear from you.</p>
+</div>
+
+<div class="contact">
+
+<div class="contact-info">
+
+<h3>Survivor Foundation</h3>
+
+<p>
+For partnerships, donations, volunteering or general inquiries,
+please get in touch with us.
+</p>
+
+<div class="contact-item">
+<strong>📞 Phone</strong>
+<p>+255 785 129 140</p>
+</div>
+
+<div class="contact-item">
+<strong>📧 Email</strong>
+<p>joshuabaraba2002@gmail.com</p>
+</div>
+
+<div class="contact-item">
+<strong>📍 Location</strong>
+<p>Tanzania</p>
+</div>
+
+</div>
+
+
+<form onsubmit="sendWhatsApp(event)">
+
+<input type="text" id="name" placeholder="Your Name" required>
+
+<input type="email" id="email" placeholder="Your Email" required>
+
+<textarea id="message" placeholder="Your Message" required></textarea>
+
+<button type="submit" class="btn">
+Send Message
+</button>
+
+</form>
+
+</div>
+</div>
+</section>
+
+
+<!-- FOOTER -->
+<footer>
+
+<div class="container">
+
+<h3>Survivor Foundation</h3>
+
+<p>Hope • Strength • Transformation</p>
+
+<div class="social">
+<a href="#home">Home</a>
+<a href="#about">About</a>
+<a href="#programs">Programs</a>
+<a href="#contact">Contact</a>
+</div>
+
+<p>
+© <span id="year"></span> Survivor Foundation. All Rights Reserved.
+</p>
+
+</div>
+
+</footer>
+
+
+<script>
+
+function toggleMenu(){
+    document.getElementById("navLinks").classList.toggle("active");
+}
+
+document.querySelectorAll(".nav-links a").forEach(function(link){
+    link.addEventListener("click",function(){
+        document.getElementById("navLinks").classList.remove("active");
+    });
+});
+
+document.getElementById("year").textContent = new Date().getFullYear();
+
+function sendWhatsApp(event){
+
+    event.preventDefault();
+
+    let name = document.getElementById("name").value;
+    let email = document.getElementById("email").value;
+    let message = document.getElementById("message").value;
+
+    let text =
+    "Hello Survivor Foundation,%0A%0A" +
+    "Name: " + encodeURIComponent(name) + "%0A" +
+    "Email: " + encodeURIComponent(email) + "%0A" +
+    "Message: " + encodeURIComponent(message);
+
+    window.open(
+        "https://wa.me/255785129140?text=" + text,
+        "_blank"
+    );
+}
+
+</script>
+
+</body>
+                 </html>
