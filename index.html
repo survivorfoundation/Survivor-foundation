@@ -1,61 +1,59 @@
 <!DOCTYPE html>
-<!-- FOUNDER & CEO -->
-<section>
-<div class="container">
+<html lang="en">
 
-<div class="section-title">
-<h2>Our Leadership</h2>
-<p>Committed leadership for sustainable community impact.</p>
-</div>
+<head>
 
-<div class="about">
+<meta charset="UTF-8">
 
-<div>
-<h3>Joshua John Baraba</h3>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<h4 style="color:#f5a623; margin-bottom:15px;">
-Founder & CEO — Survivor Foundation
-</h4>
+<title>Joshua John Baraba | Founder & CEO of Survivor Foundation</title>
 
-<p>
-Joshua John Baraba is the Founder and Chief Executive Officer
-of Survivor Foundation, dedicated to advancing the foundation's
-mission of empowering vulnerable people and strengthening communities.
-</p>
+<meta name="description" content="Joshua John Baraba is the Founder and CEO of Survivor Foundation, a community-focused organization in Tanzania committed to empowering vulnerable people, supporting education, healthcare, youth opportunities and sustainable community development.">
 
-<p>
-Through leadership, partnerships and community-focused initiatives,
-Survivor Foundation seeks to create hope, opportunities and
-sustainable positive change.
-</p>
+<meta name="keywords" content="Joshua John Baraba, Joshua John Baraba CEO, Joshua Baraba, Survivor Foundation, Founder Survivor Foundation, CEO Survivor Foundation, Tanzania Foundation, Tanzania NGO, community development, youth empowerment, education, healthcare">
 
-<a href="#contact" class="btn">Contact Survivor Foundation</a>
-</div>
-
-<div>
-<img src="logo.png"
-alt="Joshua John Baraba - Founder and CEO of Survivor Foundation"
-style="width:180px; display:block; margin:auto;">
-</div>
-
-</div>
-</div>
-</section>
-<title>Survivor Foundation | Hope, Strength & Transformation</title>
-
-<meta name="description" content="Survivor Foundation is a community-focused organization in Tanzania committed to empowering vulnerable people, supporting education, healthcare, youth and sustainable community development.">
-
-<meta name="keywords" content="Survivor Foundation, Tanzania Foundation, Tanzania NGO, community development, youth empowerment, education, healthcare, charity Tanzania">
-
-<meta name="author" content="Survivor Foundation">
+<meta name="author" content="Joshua John Baraba - Founder & CEO, Survivor Foundation">
 
 <meta name="google-site-verification" content="Vc-3mkD3J0JfprZ4PTrnQb-LWGeu6doguaXGTc5q-XI">
 
-<meta property="og:title" content="Survivor Foundation">
-<meta property="og:description" content="Hope, Strength & Transformation">
+<meta property="og:title" content="Joshua John Baraba | Founder & CEO of Survivor Foundation">
+
+<meta property="og:description" content="Joshua John Baraba, Founder and CEO of Survivor Foundation.">
+
 <meta property="og:type" content="website">
 
+
+<!-- STRUCTURED DATA FOR GOOGLE -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Person",
+      "name": "Joshua John Baraba",
+      "jobTitle": "Founder & CEO",
+      "worksFor": {
+        "@type": "Organization",
+        "name": "Survivor Foundation"
+      }
+    },
+    {
+      "@type": "Organization",
+      "name": "Survivor Foundation",
+      "founder": {
+        "@type": "Person",
+        "name": "Joshua John Baraba",
+        "jobTitle": "Founder & CEO"
+      }
+    }
+  ]
+}
+</script>
+
+
 <style>
+
 *{
     margin:0;
     padding:0;
@@ -80,9 +78,11 @@ a{
     margin:auto;
 }
 
+
 /* HEADER */
+
 header{
-    background:#ffffff;
+    background:#fff;
     position:sticky;
     top:0;
     z-index:1000;
@@ -100,7 +100,7 @@ header{
     display:flex;
     align-items:center;
     gap:10px;
-    font-size:22px;
+    font-size:21px;
     font-weight:bold;
     color:#123b63;
 }
@@ -114,7 +114,7 @@ header{
 .nav-links{
     display:flex;
     list-style:none;
-    gap:24px;
+    gap:20px;
 }
 
 .nav-links a{
@@ -133,12 +133,15 @@ header{
     cursor:pointer;
 }
 
+
 /* HERO */
+
 .hero{
     min-height:650px;
     background:
-    linear-gradient(rgba(0,35,65,.65),rgba(0,35,65,.65)),
+    linear-gradient(rgba(0,35,65,.68),rgba(0,35,65,.68)),
     url("IMG-20250809-WA0014-1.jpg") center/cover;
+
     display:flex;
     align-items:center;
     text-align:center;
@@ -181,7 +184,9 @@ header{
     border:2px solid white;
 }
 
+
 /* GENERAL */
+
 section{
     padding:75px 0;
 }
@@ -201,7 +206,9 @@ section{
     color:#666;
 }
 
+
 /* ABOUT */
+
 .about{
     display:grid;
     grid-template-columns:1fr 1fr;
@@ -224,7 +231,49 @@ section{
     margin-bottom:15px;
 }
 
+
+/* FOUNDER */
+
+.founder-section{
+    background:#f5f8fb;
+}
+
+.founder-card{
+    max-width:950px;
+    margin:auto;
+    background:#fff;
+    padding:45px;
+    border-radius:18px;
+    box-shadow:0 6px 25px rgba(0,0,0,.08);
+    display:grid;
+    grid-template-columns:180px 1fr;
+    gap:40px;
+    align-items:center;
+}
+
+.founder-logo{
+    width:170px;
+    height:170px;
+    object-fit:contain;
+    margin:auto;
+}
+
+.founder-card h3{
+    color:#123b63;
+    font-size:32px;
+    margin-bottom:8px;
+}
+
+.founder-title{
+    color:#f5a623;
+    font-size:19px;
+    font-weight:bold;
+    margin-bottom:18px;
+}
+
+
 /* CARDS */
+
 .cards{
     display:grid;
     grid-template-columns:repeat(3,1fr);
@@ -254,7 +303,9 @@ section{
     margin-bottom:10px;
 }
 
+
 /* MISSION */
+
 .mission-section{
     background:#f5f8fb;
 }
@@ -267,7 +318,7 @@ section{
 
 .mission-box{
     padding:35px;
-    background:white;
+    background:#fff;
     border-radius:15px;
     box-shadow:0 5px 18px rgba(0,0,0,.07);
 }
@@ -277,7 +328,9 @@ section{
     margin-bottom:12px;
 }
 
+
 /* OBJECTIVES */
+
 .objectives{
     display:grid;
     grid-template-columns:1fr 1fr;
@@ -295,11 +348,14 @@ section{
     color:#123b63;
 }
 
+
 /* IMPACT */
+
 .impact{
     background:
     linear-gradient(rgba(0,35,65,.78),rgba(0,35,65,.78)),
     url("IMG-20250809-WA0044.jpg") center/cover;
+
     color:white;
     text-align:center;
 }
@@ -323,12 +379,16 @@ section{
     font-size:17px;
 }
 
+
 /* INVOLVEMENT */
+
 .involve{
     background:#f5f8fb;
 }
 
+
 /* DONATE */
+
 .donate{
     background:#123b63;
     color:white;
@@ -345,7 +405,9 @@ section{
     margin:0 auto 25px;
 }
 
+
 /* GALLERY */
+
 .gallery{
     display:grid;
     grid-template-columns:repeat(4,1fr);
@@ -364,7 +426,9 @@ section{
     transform:scale(1.03);
 }
 
+
 /* CONTACT */
+
 .contact{
     display:grid;
     grid-template-columns:1fr 1fr;
@@ -411,7 +475,9 @@ form button{
     font-size:16px;
 }
 
+
 /* FOOTER */
+
 footer{
     background:#0b2945;
     color:white;
@@ -433,7 +499,9 @@ footer p{
     font-weight:bold;
 }
 
+
 /* MOBILE */
+
 @media(max-width:800px){
 
     .nav-links{
@@ -470,8 +538,14 @@ footer p{
     }
 
     .about,
-    .contact{
+    .contact,
+    .founder-card{
         grid-template-columns:1fr;
+    }
+
+    .founder-card{
+        text-align:center;
+        padding:30px 20px;
     }
 
     .cards,
@@ -492,7 +566,12 @@ footer p{
     }
 }
 
+
 @media(max-width:500px){
+
+    .logo{
+        font-size:17px;
+    }
 
     .hero h1{
         font-size:32px;
@@ -506,38 +585,66 @@ footer p{
     .gallery img{
         height:250px;
     }
+
+    .founder-card h3{
+        font-size:27px;
+    }
 }
+
 </style>
+
 </head>
+
 
 <body>
 
+
 <!-- HEADER -->
+
 <header>
+
 <div class="container navbar">
 
 <a href="#home" class="logo">
+
 <img src="logo.png" alt="Survivor Foundation Logo">
+
 <span>Survivor Foundation</span>
+
 </a>
+
 
 <div class="menu-btn" onclick="toggleMenu()">☰</div>
 
+
 <ul class="nav-links" id="navLinks">
+
 <li><a href="#home">Home</a></li>
+
 <li><a href="#about">About</a></li>
+
+<li><a href="#founder">Founder & CEO</a></li>
+
 <li><a href="#mission">Mission</a></li>
+
 <li><a href="#programs">Programs</a></li>
+
 <li><a href="#gallery">Gallery</a></li>
+
 <li><a href="#contact">Contact</a></li>
+
 </ul>
 
 </div>
+
 </header>
 
 
+
 <!-- HERO -->
+
 <section class="hero" id="home">
+
 <div class="container hero-content">
 
 <h1>Hope, Strength & Transformation</h1>
@@ -548,26 +655,42 @@ healthier and more sustainable future.
 </p>
 
 <a href="#about" class="btn">Learn More</a>
-<a href="#contact" class="btn btn-outline">Get Involved</a>
+
+<a href="#founder" class="btn btn-outline">
+Meet Our Founder
+</a>
 
 </div>
+
 </section>
 
 
+
 <!-- ABOUT -->
+
 <section id="about">
+
 <div class="container">
 
 <div class="section-title">
+
 <h2>About Survivor Foundation</h2>
+
 <p>Creating positive change through compassion and action.</p>
+
 </div>
+
 
 <div class="about">
 
-<img src="IMG-20250809-WA0014-1.jpg" alt="Survivor Foundation Community">
+<img
+src="IMG-20250809-WA0014-1.jpg"
+alt="Survivor Foundation Community"
+>
+
 
 <div>
+
 <h3>Who We Are</h3>
 
 <p>
@@ -586,286 +709,588 @@ youth empowerment and strategic partnerships, we work to create
 sustainable positive change.
 </p>
 
-<a href="#programs" class="btn">Our Programs</a>
+<a href="#programs" class="btn">
+Our Programs
+</a>
 
 </div>
 
 </div>
+
 </div>
+
 </section>
 
 
-<!-- MISSION VISION PURPOSE -->
-<section class="mission-section" id="mission">
+
+<!-- FOUNDER & CEO -->
+
+<section class="founder-section" id="founder">
+
 <div class="container">
 
 <div class="section-title">
-<h2>Mission, Vision & Purpose</h2>
-<p>The principles that guide our work.</p>
+
+<h2>Founder & CEO</h2>
+
+<p>Leadership behind Survivor Foundation</p>
+
 </div>
+
+
+<div class="founder-card">
+
+
+<div>
+
+<img
+src="logo.png"
+class="founder-logo"
+alt="Survivor Foundation Logo"
+>
+
+</div>
+
+
+<div>
+
+<h3>Joshua John Baraba</h3>
+
+<div class="founder-title">
+Founder & CEO — Survivor Foundation
+</div>
+
+
+<p>
+Joshua John Baraba is the Founder and Chief Executive Officer
+of Survivor Foundation, a community-focused organization dedicated
+to empowering vulnerable people and strengthening communities.
+</p>
+
+
+<p>
+Through leadership, partnerships and community-focused initiatives,
+Survivor Foundation seeks to create hope, opportunities and
+sustainable positive change.
+</p>
+
+
+<p>
+His leadership supports the foundation's commitment to education,
+healthcare initiatives, youth opportunities, community development
+and strategic partnerships.
+</p>
+
+
+<a href="#contact" class="btn">
+Contact Survivor Foundation
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- MISSION VISION PURPOSE -->
+
+<section class="mission-section" id="mission">
+
+<div class="container">
+
+<div class="section-title">
+
+<h2>Mission, Vision & Purpose</h2>
+
+<p>The principles that guide our work.</p>
+
+</div>
+
 
 <div class="mission-grid">
 
+
 <div class="mission-box">
+
 <h3>Our Mission</h3>
+
 <p>
 To empower vulnerable people and communities through access to
 support, opportunities, education, healthcare initiatives,
 partnerships and sustainable community development.
 </p>
+
 </div>
 
+
 <div class="mission-box">
+
 <h3>Our Vision</h3>
+
 <p>
 A resilient and inclusive society where every person has the
 opportunity to live with dignity, hope, purpose and equal
 opportunities for a better future.
 </p>
+
 </div>
 
+
 <div class="mission-box">
+
 <h3>Our Purpose</h3>
+
 <p>
 To turn compassion into action and create sustainable solutions
 that improve lives and strengthen communities.
 </p>
+
+</div>
+
+
 </div>
 
 </div>
-</div>
+
 </section>
+
 
 
 <!-- VALUES -->
+
 <section>
+
 <div class="container">
 
 <div class="section-title">
+
 <h2>Our Core Values</h2>
+
 <p>Values that shape everything we do.</p>
+
 </div>
+
 
 <div class="cards">
 
+
 <div class="card">
+
 <div class="card-icon">❤️</div>
+
 <h3>Compassion</h3>
-<p>We care about people and respond to community needs with empathy.</p>
+
+<p>
+We care about people and respond to community needs with empathy.
+</p>
+
 </div>
 
+
 <div class="card">
+
 <div class="card-icon">🤝</div>
+
 <h3>Partnership</h3>
-<p>We believe collaboration creates stronger and lasting solutions.</p>
+
+<p>
+We believe collaboration creates stronger and lasting solutions.
+</p>
+
 </div>
 
+
 <div class="card">
+
 <div class="card-icon">🛡️</div>
+
 <h3>Integrity</h3>
-<p>We promote honesty, accountability and responsible action.</p>
+
+<p>
+We promote honesty, accountability and responsible action.
+</p>
+
 </div>
+
 
 <div class="card">
+
 <div class="card-icon">🌱</div>
+
 <h3>Sustainability</h3>
-<p>We focus on solutions that create long-term positive impact.</p>
+
+<p>
+We focus on solutions that create long-term positive impact.
+</p>
+
+</div>
+
+
 </div>
 
 </div>
-</div>
+
 </section>
+
 
 
 <!-- OBJECTIVES -->
+
 <section class="mission-section">
+
 <div class="container">
 
 <div class="section-title">
+
 <h2>Our Objectives</h2>
+
 <p>Areas where we aim to create meaningful change.</p>
+
 </div>
+
 
 <div class="objectives">
 
-<div class="objective">
-<strong>01. Support Vulnerable People</strong>
-<p>Provide support and opportunities for people facing difficult circumstances.</p>
-</div>
 
 <div class="objective">
-<strong>02. Promote Education</strong>
-<p>Support access to education and learning opportunities.</p>
+
+<strong>
+01. Support Vulnerable People
+</strong>
+
+<p>
+Provide support and opportunities for people facing difficult circumstances.
+</p>
+
 </div>
+
 
 <div class="objective">
-<strong>03. Improve Community Health</strong>
-<p>Support healthcare awareness and community health initiatives.</p>
+
+<strong>
+02. Promote Education
+</strong>
+
+<p>
+Support access to education and learning opportunities.
+</p>
+
 </div>
+
 
 <div class="objective">
-<strong>04. Empower Communities</strong>
-<p>Strengthen communities through sustainable development initiatives.</p>
+
+<strong>
+03. Improve Community Health
+</strong>
+
+<p>
+Support healthcare awareness and community health initiatives.
+</p>
+
 </div>
+
 
 <div class="objective">
-<strong>05. Youth Opportunities</strong>
-<p>Encourage skills, opportunities and positive development for young people.</p>
+
+<strong>
+04. Empower Communities
+</strong>
+
+<p>
+Strengthen communities through sustainable development initiatives.
+</p>
+
 </div>
+
 
 <div class="objective">
-<strong>06. Build Partnerships</strong>
-<p>Work with donors, organizations and community stakeholders.</p>
+
+<strong>
+05. Youth Opportunities
+</strong>
+
+<p>
+Encourage skills, opportunities and positive development for young people.
+</p>
+
+</div>
+
+
+<div class="objective">
+
+<strong>
+06. Build Partnerships
+</strong>
+
+<p>
+Work with donors, organizations and community stakeholders.
+</p>
+
+</div>
+
+
 </div>
 
 </div>
-</div>
+
 </section>
+
 
 
 <!-- PROGRAMS -->
+
 <section id="programs">
+
 <div class="container">
 
 <div class="section-title">
+
 <h2>Our Programs</h2>
+
 <p>Working together to improve lives and communities.</p>
+
 </div>
+
 
 <div class="cards">
 
+
 <div class="card">
+
 <div class="card-icon">🏥</div>
+
 <h3>Healthcare</h3>
+
 <p>
 Supporting healthcare awareness, access and community health initiatives.
 </p>
+
 </div>
 
+
 <div class="card">
+
 <div class="card-icon">📚</div>
+
 <h3>Education</h3>
+
 <p>
 Promoting education and learning opportunities for vulnerable communities.
 </p>
+
 </div>
 
+
 <div class="card">
+
 <div class="card-icon">🏘️</div>
+
 <h3>Community Support</h3>
+
 <p>
 Providing community-based support and practical assistance.
 </p>
+
 </div>
 
+
 <div class="card">
+
 <div class="card-icon">🌍</div>
+
 <h3>Community Development</h3>
+
 <p>
 Encouraging sustainable development and stronger communities.
 </p>
+
 </div>
 
+
 <div class="card">
+
 <div class="card-icon">👥</div>
+
 <h3>Youth Empowerment</h3>
+
 <p>
 Encouraging young people to develop skills and pursue opportunities.
 </p>
+
 </div>
 
+
 <div class="card">
+
 <div class="card-icon">💡</div>
+
 <h3>Skills & Opportunities</h3>
+
 <p>
 Encouraging practical skills and opportunities that can improve livelihoods.
 </p>
+
+</div>
+
+
 </div>
 
 </div>
-</div>
+
 </section>
 
 
+
 <!-- IMPACT -->
+
 <section class="impact">
+
 <div class="container">
 
 <h2>Our Commitment to Impact</h2>
 
+
 <div class="impact-grid">
 
+
 <div class="impact-box">
+
 <h3>People</h3>
-<p>Putting people at the center of our work.</p>
+
+<p>
+Putting people at the center of our work.
+</p>
+
 </div>
 
+
 <div class="impact-box">
+
 <h3>Hope</h3>
-<p>Creating hope through meaningful action.</p>
+
+<p>
+Creating hope through meaningful action.
+</p>
+
 </div>
 
+
 <div class="impact-box">
+
 <h3>Action</h3>
-<p>Turning ideas and compassion into action.</p>
+
+<p>
+Turning ideas and compassion into action.
+</p>
+
 </div>
+
 
 <div class="impact-box">
+
 <h3>Future</h3>
-<p>Building sustainable opportunities for tomorrow.</p>
+
+<p>
+Building sustainable opportunities for tomorrow.
+</p>
+
 </div>
+
 
 </div>
 
 </div>
+
 </section>
+
 
 
 <!-- GET INVOLVED -->
+
 <section class="involve">
+
 <div class="container">
 
 <div class="section-title">
+
 <h2>Get Involved</h2>
+
 <p>You can be part of the change.</p>
+
 </div>
+
 
 <div class="cards">
 
+
 <div class="card">
+
 <div class="card-icon">💰</div>
+
 <h3>Become a Donor</h3>
+
 <p>
 Your support can help us reach more people and communities.
 </p>
-<a href="#contact" class="btn">Support Us</a>
+
+<a href="#contact" class="btn">
+Support Us
+</a>
+
 </div>
 
+
 <div class="card">
+
 <div class="card-icon">🤝</div>
+
 <h3>Become a Partner</h3>
+
 <p>
 Partner with Survivor Foundation to create sustainable solutions.
 </p>
-<a href="#contact" class="btn">Partner With Us</a>
+
+<a href="#contact" class="btn">
+Partner With Us
+</a>
+
 </div>
 
+
 <div class="card">
+
 <div class="card-icon">🙋</div>
+
 <h3>Volunteer</h3>
+
 <p>
 Join our efforts and contribute your skills and time to our mission.
 </p>
-<a href="#contact" class="btn">Contact Us</a>
+
+<a href="#contact" class="btn">
+Contact Us
+</a>
+
+</div>
+
+
 </div>
 
 </div>
-</div>
+
 </section>
 
 
+
 <!-- DONATE -->
+
 <section class="donate">
+
 <div class="container">
 
 <h2>Your Support Can Change a Life</h2>
@@ -875,55 +1300,107 @@ Every contribution, partnership and act of service can help create
 hope and opportunities for vulnerable people and communities.
 </p>
 
-<a href="#contact" class="btn">Become a Donor</a>
+<a href="#contact" class="btn">
+Become a Donor
+</a>
 
 </div>
+
 </section>
+
 
 
 <!-- GALLERY -->
+
 <section id="gallery">
+
 <div class="container">
 
 <div class="section-title">
+
 <h2>Our Gallery</h2>
+
 <p>Moments from our community journey.</p>
+
 </div>
+
 
 <div class="gallery">
 
-<img src="IMG-20250809-WA0014-1.jpg" alt="Survivor Foundation">
 
-<img src="AIMG-20250809-WAO034-1.jpg" alt="Community Activity">
+<img
+src="IMG-20250809-WA0014-1.jpg"
+alt="Survivor Foundation"
+>
 
-<img src="IMG-20250809-WA0044.jpg" alt="Community Support">
 
-<img src="IMG-20250809-WA0059.jpg" alt="Survivor Foundation Activity">
+<img
+src="AIMG-20250809-WAO034-1.jpg"
+alt="Survivor Foundation Community Activity"
+>
 
-<img src="IMG-20250809-WA0062.jpg" alt="Community Work">
 
-<img src="PXL_20240224_114137728.PORTRAIT.ORIGINAL-1.jpg" alt="Community Member">
+<img
+src="IMG-20250809-WA0044.jpg"
+alt="Survivor Foundation Community Support"
+>
 
-<img src="PXL_20250831_114124245.PORTRAIT.jpg" alt="Community Activity">
 
-<img src="PXL20250831_114429948.PORTRAIT.ORIGINAL-1.jpg" alt="Survivor Foundation">
+<img
+src="IMG-20250809-WA0059.jpg"
+alt="Survivor Foundation Activity"
+>
+
+
+<img
+src="IMG-20250809-WA0062.jpg"
+alt="Survivor Foundation Community Work"
+>
+
+
+<img
+src="PXL_20240224_114137728.PORTRAIT.ORIGINAL-1.jpg"
+alt="Survivor Foundation Community"
+>
+
+
+<img
+src="PXL_20250831_114124245.PORTRAIT.jpg"
+alt="Survivor Foundation Activity"
+>
+
+
+<img
+src="PXL20250831_114429948.PORTRAIT.ORIGINAL-1.jpg"
+alt="Survivor Foundation"
+>
+
 
 </div>
 
 </div>
+
 </section>
 
 
+
 <!-- CONTACT -->
+
 <section id="contact" class="mission-section">
+
 <div class="container">
 
 <div class="section-title">
+
 <h2>Contact Us</h2>
+
 <p>We would love to hear from you.</p>
+
 </div>
 
+
 <div class="contact">
+
 
 <div class="contact-info">
 
@@ -934,31 +1411,67 @@ For partnerships, donations, volunteering or general inquiries,
 please get in touch with us.
 </p>
 
+
 <div class="contact-item">
+
 <strong>📞 Phone</strong>
-<p>+255 785 129 140</p>
+
+<p>
++255 785 129 140
+</p>
+
 </div>
 
+
 <div class="contact-item">
+
 <strong>📧 Email</strong>
-<p>joshuabaraba2002@gmail.com</p>
+
+<p>
+joshuabaraba2002@gmail.com
+</p>
+
 </div>
 
+
 <div class="contact-item">
+
 <strong>📍 Location</strong>
-<p>Tanzania</p>
+
+<p>
+Tanzania
+</p>
+
 </div>
+
 
 </div>
 
 
 <form onsubmit="sendWhatsApp(event)">
 
-<input type="text" id="name" placeholder="Your Name" required>
+<input
+type="text"
+id="name"
+placeholder="Your Name"
+required
+>
 
-<input type="email" id="email" placeholder="Your Email" required>
 
-<textarea id="message" placeholder="Your Message" required></textarea>
+<input
+type="email"
+id="email"
+placeholder="Your Email"
+required
+>
+
+
+<textarea
+id="message"
+placeholder="Your Message"
+required
+></textarea>
+
 
 <button type="submit" class="btn">
 Send Message
@@ -966,29 +1479,53 @@ Send Message
 
 </form>
 
+
 </div>
+
 </div>
+
 </section>
 
 
+
 <!-- FOOTER -->
+
 <footer>
 
 <div class="container">
 
-<h3>Survivor Foundation</h3>
-
-<p>Hope • Strength • Transformation</p>
-
-<div class="social">
-<a href="#home">Home</a>
-<a href="#about">About</a>
-<a href="#programs">Programs</a>
-<a href="#contact">Contact</a>
-</div>
+<h3>
+Survivor Foundation
+</h3>
 
 <p>
-© <span id="year"></span> Survivor Foundation. All Rights Reserved.
+Hope • Strength • Transformation
+</p>
+
+
+<div class="social">
+
+<a href="#home">Home</a>
+
+<a href="#about">About</a>
+
+<a href="#founder">Founder & CEO</a>
+
+<a href="#programs">Programs</a>
+
+<a href="#contact">Contact</a>
+
+</div>
+
+
+<p>
+Founded and led by Joshua John Baraba
+</p>
+
+
+<p>
+© <span id="year"></span>
+Survivor Foundation. All Rights Reserved.
 </p>
 
 </div>
@@ -996,41 +1533,10 @@ Send Message
 </footer>
 
 
+
 <script>
 
 function toggleMenu(){
-    document.getElementById("navLinks").classList.toggle("active");
-}
 
-document.querySelectorAll(".nav-links a").forEach(function(link){
-    link.addEventListener("click",function(){
-        document.getElementById("navLinks").classList.remove("active");
-    });
-});
-
-document.getElementById("year").textContent = new Date().getFullYear();
-
-function sendWhatsApp(event){
-
-    event.preventDefault();
-
-    let name = document.getElementById("name").value;
-    let email = document.getElementById("email").value;
-    let message = document.getElementById("message").value;
-
-    let text =
-    "Hello Survivor Foundation,%0A%0A" +
-    "Name: " + encodeURIComponent(name) + "%0A" +
-    "Email: " + encodeURIComponent(email) + "%0A" +
-    "Message: " + encodeURIComponent(message);
-
-    window.open(
-        "https://wa.me/255785129140?text=" + text,
-        "_blank"
-    );
-}
-
-</script>
-
-</body>
-                 </html>
+    document
+   
