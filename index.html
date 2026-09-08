@@ -2269,130 +2269,113 @@ const translations = {
   }
 
 };
+  /* ================= LANGUAGE FUNCTION ================= */
 
+function setLanguage(lang) {
 
-/* ================= LANGUAGE FUNCTION ================= */
+  const selectedLanguage = translations[lang];
 
-function setLanguage(lang){
+  if (!selectedLanguage) {
+    console.log("Language not found:", lang);
+    return;
+  }
 
-  const selectedLanguage =
-    translations[lang];
+  /* Translate normal text */
+  document.querySelectorAll("[data-i18n]").forEach(function(element) {
 
-  if(!selectedLanguage) return;
+    const key = element.getAttribute("data-i18n");
 
-
-  document.querySelectorAll("[data-i18n]").forEach(element => {
-
-    const key =
-      element.getAttribute("data-i18n");
-
-    if(selectedLanguage[key]){
-
-      element.textContent =
-        selectedLanguage[key];
-
+    if (Object.prototype.hasOwnProperty.call(selectedLanguage, key)) {
+      element.textContent = selectedLanguage[key];
     }
 
   });
 
 
-  document
-    .querySelectorAll("[data-i18n-placeholder]")
-    .forEach(element => {
+  /* Translate placeholders */
+  document.querySelectorAll("[data-i18n-placeholder]").forEach(function(element) {
 
-      const key =
-        element.getAttribute("data-i18n-placeholder");
+    const key = element.getAttribute("data-i18n-placeholder");
 
-      if(selectedLanguage[key]){
+    if (Object.prototype.hasOwnProperty.call(selectedLanguage, key)) {
+      element.setAttribute(
+        "placeholder",
+        selectedLanguage[key]
+      );
+    }
 
-        element.placeholder =
-          selectedLanguage[key];
-
-      }
-
-    });
+  });
 
 
-  document.documentElement.lang =
-    lang === "sw" ? "sw" : "en";
-
-
-  localStorage.setItem(
-    "scf_language",
-    lang
+  /* Change HTML language */
+  document.documentElement.setAttribute(
+    "lang",
+    lang === "sw" ? "sw" : "en"
   );
+
+
+  /* Save selected language */
+  try {
+    localStorage.setItem("scf_language", lang);
+  } catch (error) {
+    console.log("Language preference could not be saved.");
+  }
 
 }
 
 
 /* ================= LANGUAGE SELECT ================= */
 
-document
-  .getElementById("languageSelect")
-  .addEventListener("change", function(){
+const languageSelect =
+  document.getElementById("languageSelect");
 
-    setLanguage(this.value);
+if (languageSelect) {
 
-  });
+  languageSelect.addEventListener("change", function() {
 
+    const selectedLang = this.value;
 
-/* ================= LOAD SAVED LANGUAGE ================= */
+    console.log("Changing language to:", selectedLang);
 
-const savedLanguage =
-  localStorage.getItem("scf_language") || "en";
+    setLanguage(selectedLang);
 
-document
-  .getElementById("languageSelect")
-  .value = savedLanguage;
-
-setLanguage(savedLanguage);
-
-
-/* ================= BACK TO TOP ================= */
-
-const topBtn =
-  document.getElementById("topBtn");
-
-
-window.addEventListener("scroll", function(){
-
-  if(window.scrollY > 400){
-
-    topBtn.style.display = "block";
-
-  }else{
-
-    topBtn.style.display = "none";
-
-  }
-
-});
-
-
-function goTop(){
-
-  window.scrollTo({
-    top:0,
-    behavior:"smooth"
   });
 
 }
 
 
-/* ================= CLOSE MENU ON RESIZE ================= */
+/* ================= LOAD SAVED LANGUAGE ================= */
 
-window.addEventListener("resize", function(){
+let savedLanguage = "en";
 
-  if(window.innerWidth > 900){
+try {
 
-    closeMenu();
+  savedLanguage =
+    localStorage.getItem("scf_language") || "en";
 
-  }
+} catch (error) {
 
-});
+  savedLanguage = "en";
+
+}
 
 
-</script>
+/* Make sure only valid languages are loaded */
 
-</body>
-</html>
+if (!translations[savedLanguage]) {
+  savedLanguage = "en";
+}
+
+
+/* Set dropdown */
+
+if (languageSelect) {
+  languageSelect.value = savedLanguage;
+}
+
+
+/* Apply language */
+
+setLanguage(savedLanguage);
+
+
