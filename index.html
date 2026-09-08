@@ -5,10 +5,12 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Survivor Charity Foundation</title>
+<title>Survivor Charity Foundation | Hope, Strength & Transformation</title>
 
-<meta name="description" content="Survivor Charity Foundation - Hope, Strength and Transformation. Empowering vulnerable people and communities.">
-<meta name="keywords" content="Survivor Charity Foundation, charity, Tanzania, children, education, healthcare, community">
+<meta name="description" content="Survivor Charity Foundation - Hope, Strength and Transformation. Empowering vulnerable people and communities through education, healthcare, youth empowerment and sustainable development.">
+
+<meta name="keywords" content="Survivor Charity Foundation, charity Tanzania, NGO Tanzania, community development, education, healthcare, youth empowerment">
+
 <meta name="author" content="Joshua John Baraba">
 
 <meta name="google-site-verification" content="Vc-3mkD3J0JfprZ4PTrnQb-LWGeu6doguaXGTc5q-XI">
@@ -17,8 +19,9 @@
 <meta property="og:description" content="Hope, Strength & Transformation">
 <meta property="og:type" content="website">
 
-
 <style>
+
+/* ================= GENERAL ================= */
 
 *{
   margin:0;
@@ -70,7 +73,7 @@ section{
 .navbar{
   width:100%;
   background:#fff;
-  box-shadow:0 2px 12px rgba(0,0,0,0.10);
+  box-shadow:0 2px 12px rgba(0,0,0,.10);
   position:sticky;
   top:0;
   z-index:9999;
@@ -106,7 +109,7 @@ section{
   color:#333;
   font-size:14px;
   font-weight:700;
-  transition:0.3s;
+  transition:.3s;
 }
 
 .nav-links a:hover{
@@ -152,7 +155,7 @@ section{
     linear-gradient(rgba(0,0,0,.58),rgba(0,0,0,.58)),
     url("IMG-20250809-WA0014-1.jpg") center/cover;
 
-  color:white;
+  color:#fff;
 }
 
 .hero-content{
@@ -193,7 +196,7 @@ section{
 
 .about{
   display:grid;
-  grid-template-columns:1fr 1fr;
+  grid-template-columns:1fr;
   gap:50px;
   align-items:center;
 }
@@ -265,13 +268,6 @@ section{
 }
 
 
-/* ================= VALUES ================= */
-
-.values{
-  background:#f8f8f8;
-}
-
-
 /* ================= OBJECTIVES ================= */
 
 .objectives{
@@ -330,7 +326,7 @@ section{
 
 .impact-box{
   padding:30px 15px;
-  background:white;
+  background:#fff;
   border-radius:10px;
 }
 
@@ -422,21 +418,34 @@ section{
 .contact{
   display:grid;
   grid-template-columns:1fr 1fr;
-  gap:40px;
+  gap:50px;
+  align-items:start;
 }
 
 .contact-info div{
-  margin-bottom:18px;
+  margin-bottom:20px;
 }
 
 .contact-info strong{
   display:block;
   color:#f5a623;
+  font-size:17px;
 }
 
 .contact-info a{
   color:#333;
   text-decoration:none;
+}
+
+.contact-info a:hover{
+  color:#f5a623;
+}
+
+.contact-box{
+  background:#fafafa;
+  padding:30px;
+  border-radius:12px;
+  box-shadow:0 4px 18px rgba(0,0,0,.06);
 }
 
 form input,
@@ -447,6 +456,7 @@ form textarea{
   border:1px solid #ddd;
   border-radius:7px;
   font-family:inherit;
+  font-size:15px;
 }
 
 form textarea{
@@ -454,20 +464,30 @@ form textarea{
   resize:vertical;
 }
 
+form input:focus,
+form textarea:focus{
+  outline:none;
+  border-color:#f5a623;
+}
+
 
 /* ================= FOOTER ================= */
 
 footer{
   background:#222;
-  color:white;
+  color:#fff;
   text-align:center;
   padding:45px 20px;
 }
 
 footer a{
-  color:white;
+  color:#fff;
   text-decoration:none;
   margin:0 8px;
+}
+
+footer a:hover{
+  color:#f5a623;
 }
 
 footer p{
@@ -585,8 +605,47 @@ footer p{
 
 }
 
+
+/* ================= SOCIAL BUTTONS ================= */
+
+.social-links{
+  margin-top:25px;
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px;
+}
+
+.social-links a{
+  display:inline-block;
+  padding:10px 16px;
+  background:#fff;
+  border-radius:7px;
+  box-shadow:0 3px 12px rgba(0,0,0,.08);
+}
+
+
+/* ================= BACK TO TOP ================= */
+
+#topBtn{
+  position:fixed;
+  right:20px;
+  bottom:20px;
+  width:45px;
+  height:45px;
+  border:none;
+  border-radius:50%;
+  background:#f5a623;
+  color:#fff;
+  font-size:20px;
+  cursor:pointer;
+  display:none;
+  z-index:9998;
+}
+
 </style>
 
+
+<!-- ================= SEO STRUCTURED DATA ================= -->
 
 <script type="application/ld+json">
 {
@@ -597,7 +656,9 @@ footer p{
   "founder":{
     "@type":"Person",
     "name":"Joshua John Baraba"
-  }
+  },
+  "email":"joshuabaraba2002@gmail.com",
+  "telephone":"+255785129140"
 }
 </script>
 
@@ -657,15 +718,13 @@ footer p{
 
     <div class="nav-actions">
 
-      <select class="language-select" id="languageSelect" aria-label="Language">
+      <select
+        class="language-select"
+        id="languageSelect"
+        aria-label="Language">
 
-        <option value="en">
-          🇬🇧 EN
-        </option>
-
-        <option value="sw">
-          🇹🇿 SW
-        </option>
+        <option value="en">🇬🇧 EN</option>
+        <option value="sw">🇹🇿 SW</option>
 
       </select>
 
@@ -673,9 +732,10 @@ footer p{
       <button
         class="menu-btn"
         id="menuBtn"
-        onclick="toggleMenu()"
-      >
+        onclick="toggleMenu()">
+
         ☰ Menu
+
       </button>
 
     </div>
@@ -793,8 +853,7 @@ footer p{
 
         <img
           src="logo.png"
-          alt="Survivor Charity Foundation"
-        >
+          alt="Survivor Charity Foundation logo">
 
       </div>
 
@@ -1209,7 +1268,7 @@ footer p{
 
 <!-- ================= GET INVOLVED ================= -->
 
-<section>
+<section id="involved">
 
   <div class="container">
 
@@ -1218,6 +1277,10 @@ footer p{
       <h2 data-i18n="involved_title">
         Get Involved
       </h2>
+
+      <p data-i18n="involved_subtitle">
+        There are many ways to stand with Survivor Charity Foundation.
+      </p>
 
     </div>
 
@@ -1234,10 +1297,9 @@ footer p{
           Your contribution can help us support people and communities in need.
         </p>
 
-        <a href="#contact" class=
-          <a href="#contact" class="btn" data-i18n="contact_us">
-  Contact Us
-</a>
+        <a href="#contact" class="btn" data-i18n="contact_us">
+          Contact Us
+        </a>
 
       </div>
 
@@ -1284,7 +1346,7 @@ footer p{
 
 <!-- ================= DONATE ================= -->
 
-<section class="donate" id="donate">
+<section class="donate">
 
   <div class="container">
 
@@ -1428,7 +1490,7 @@ footer p{
            alt="Survivor Charity Foundation community activity">
 
       <img src="AIMG-20250809-WAO034-1.jpg"
-           alt="Survivor Charity Foundation">
+           alt="Survivor Charity Foundation activity">
 
       <img src="IMG-20250809-WA0044.jpg"
            alt="Survivor Charity Foundation community work">
@@ -1437,10 +1499,10 @@ footer p{
            alt="Survivor Charity Foundation">
 
       <img src="IMG-20250809-WA0062.jpg"
-           alt="Survivor Charity Foundation">
+           alt="Survivor Charity Foundation community activity">
 
       <img src="PXL_20240224_114137.jpg"
-           alt="Survivor Charity Foundation activity">
+           alt="Survivor Charity Foundation">
 
     </div>
 
@@ -1523,9 +1585,10 @@ footer p{
           <a
             href="https://www.youtube.com/@survivourtv"
             target="_blank"
-            rel="noopener"
-          >
+            rel="noopener">
+
             Survivor TV
+
           </a>
 
         </div>
@@ -1540,9 +1603,10 @@ footer p{
           <a
             href="https://www.instagram.com/"
             target="_blank"
-            rel="noopener"
-          >
+            rel="noopener">
+
             Follow us on Instagram
+
           </a>
 
         </div>
@@ -1557,9 +1621,33 @@ footer p{
           <a
             href="https://wa.me/255785129140"
             target="_blank"
-            rel="noopener"
-          >
+            rel="noopener">
+
             Chat with us on WhatsApp
+
+          </a>
+
+        </div>
+
+
+        <div class="social-links">
+
+          <a
+            href="https://wa.me/255785129140"
+            target="_blank"
+            rel="noopener">
+
+            WhatsApp
+
+          </a>
+
+          <a
+            href="https://www.youtube.com/@survivourtv"
+            target="_blank"
+            rel="noopener">
+
+            YouTube
+
           </a>
 
         </div>
@@ -1569,21 +1657,19 @@ footer p{
 
       <!-- CONTACT FORM -->
 
-      <div>
+      <div class="contact-box">
 
         <form
           action="mailto:joshuabaraba2002@gmail.com"
           method="post"
-          enctype="text/plain"
-        >
+          enctype="text/plain">
 
           <input
             type="text"
             name="Name"
             placeholder="Your Name"
             data-i18n-placeholder="name_placeholder"
-            required
-          >
+            required>
 
 
           <input
@@ -1591,8 +1677,7 @@ footer p{
             name="Email"
             placeholder="Your Email"
             data-i18n-placeholder="email_placeholder"
-            required
-          >
+            required>
 
 
           <input
@@ -1600,24 +1685,23 @@ footer p{
             name="Subject"
             placeholder="Subject"
             data-i18n-placeholder="subject_placeholder"
-            required
-          >
+            required>
 
 
           <textarea
             name="Message"
             placeholder="Your Message"
             data-i18n-placeholder="message_placeholder"
-            required
-          ></textarea>
+            required></textarea>
 
 
           <button
             type="submit"
             class="btn"
-            data-i18n="send_message"
-          >
+            data-i18n="send_message">
+
             Send Message
+
           </button>
 
         </form>
@@ -1648,27 +1732,56 @@ footer p{
   </p>
 
   <p>
-    <a href="#home" data-i18n="nav_home">Home</a>
-    <a href="#about" data-i18n="nav_about">About</a>
-    <a href="#programs" data-i18n="nav_programs">Programs</a>
-    <a href="#gallery" data-i18n="nav_gallery">Gallery</a>
-    <a href="#contact" data-i18n="nav_contact">Contact</a>
+
+    <a href="#home" data-i18n="nav_home">
+      Home
+    </a>
+
+    <a href="#about" data-i18n="nav_about">
+      About
+    </a>
+
+    <a href="#programs" data-i18n="nav_programs">
+      Programs
+    </a>
+
+    <a href="#gallery" data-i18n="nav_gallery">
+      Gallery
+    </a>
+
+    <a href="#contact" data-i18n="nav_contact">
+      Contact
+    </a>
+
   </p>
 
   <p>
-    ©2026 <span id="year"></span> Survivor Charity Foundation. All rights reserved.
+    ©2026 <span id="year"></span>
+    Survivor Charity Foundation.
+    All rights reserved.
   </p>
 
 </footer>
+
+
+<!-- ================= BACK TO TOP ================= -->
+
+<button id="topBtn" onclick="goTop()" aria-label="Back to top">
+  ↑
+</button>
 
 
 <!-- ================= JAVASCRIPT ================= -->
 
 <script>
 
+
+/* ================= MOBILE MENU ================= */
+
 function toggleMenu(){
 
-  const nav = document.getElementById("navLinks");
+  const nav =
+    document.getElementById("navLinks");
 
   nav.classList.toggle("active");
 
@@ -1677,12 +1790,15 @@ function toggleMenu(){
 
 function closeMenu(){
 
-  const nav = document.getElementById("navLinks");
+  const nav =
+    document.getElementById("navLinks");
 
   nav.classList.remove("active");
 
 }
 
+
+/* ================= YEAR ================= */
 
 document.getElementById("year").textContent =
   new Date().getFullYear();
@@ -1704,50 +1820,70 @@ const translations = {
     nav_contact:"Contact",
 
     hero_title:"Hope, Strength & Transformation",
+
     hero_text:"Empowering vulnerable people and communities to build a better, healthier and more sustainable future.",
+
     learn_more:"Learn More",
     meet_founder:"Meet Our Founder",
 
     about_title:"About Survivor Foundation",
+
     about_subtitle:"Creating positive change through compassion and action.",
+
     who_we_are:"Who We Are",
 
     about_p1:"Survivor Charity Foundation is a community-focused organization committed to supporting vulnerable people and communities.",
+
     about_p2:"We believe every person deserves dignity, opportunity and hope.",
+
     about_p3:"Through education, healthcare, youth empowerment, community development and partnerships, we work to create sustainable positive change.",
+
     our_programs:"Our Programs",
 
     founder_title:"Founder & CEO",
+
     founder_subtitle:"Leadership behind Survivor Foundation",
+
     founder_role:"Founder & CEO — Survivor Foundation",
+
     founder_p1:"Survivor Charity Foundation was founded with a vision of creating hope and opportunities for vulnerable people.",
+
     founder_p2:"The foundation is committed to serving communities through compassion, responsible leadership and sustainable initiatives.",
+
     founder_p3:"Our goal is to connect people, organizations and resources to create meaningful and lasting community impact.",
+
     contact_foundation:"Contact Survivor Foundation",
 
     mission_title:"Mission, Vision & Purpose",
 
     mission:"Mission",
+
     mission_text:"To empower vulnerable people and communities through practical support, education, healthcare and sustainable development.",
 
     vision:"Vision",
+
     vision_text:"A society where every person has the opportunity to live with dignity, hope and a better future.",
 
     purpose:"Purpose",
+
     purpose_text:"To serve with compassion, strengthen communities and create lasting positive change.",
 
     values_title:"Our Core Values",
 
     compassion:"Compassion",
+
     compassion_text:"We care for people with kindness, dignity and respect.",
 
     partnership:"Partnership",
+
     partnership_text:"We believe meaningful change is stronger when we work together.",
 
     integrity:"Integrity",
+
     integrity_text:"We act with honesty, transparency and accountability.",
 
     sustainability:"Sustainability",
+
     sustainability_text:"We focus on solutions that create long-term impact.",
 
     objectives_title:"Our Objectives",
@@ -1760,56 +1896,503 @@ const translations = {
     objective6:"Build Partnerships",
 
     programs_title:"Our Programs",
+
     programs_subtitle:"Practical programs designed to create meaningful community impact.",
 
     healthcare:"Healthcare",
+
     healthcare_text:"Supporting access to better healthcare and health awareness.",
 
     education:"Education",
+
     education_text:"Supporting children and young people to access education and learning opportunities.",
 
     community_support:"Community Support",
+
     community_support_text:"Supporting vulnerable individuals and families in communities.",
 
     community_development:"Community Development",
+
     community_development_text:"Promoting sustainable initiatives that strengthen communities.",
 
     youth_empowerment:"Youth Empowerment",
+
     youth_empowerment_text:"Creating opportunities for young people to grow and contribute.",
 
     skills:"Skills & Opportunities",
+
     skills_text:"Helping people develop skills that can support their future.",
 
     impact_title:"Our Commitment to Impact",
 
     people:"People",
+
     people_text:"Putting people at the heart of everything we do.",
 
     hope:"Hope",
+
     hope_text:"Creating hope for vulnerable people and communities.",
 
     action:"Action",
+
     action_text:"Turning compassion into practical action.",
 
     future:"Future",
+
     future_text:"Building stronger and more sustainable communities.",
 
     involved_title:"Get Involved",
 
+    involved_subtitle:"There are many ways to stand with Survivor Charity Foundation.",
+
     donor:"Become a Donor",
+
     donor_text:"Your contribution can help us support people and communities in need.",
+
     contact_us:"Contact Us",
 
     volunteer:"Become a Volunteer",
+
     volunteer_text:"Join us in serving communities and creating positive change.",
+
     join_us:"Join Us",
 
     partner:"Partner With Us",
+
     partner_text:"Organizations and individuals can partner with us to expand our impact.",
+
     partner_us:"Partner With Us",
 
     donate_title:"Support Our Mission",
+
     donate_text:"Your support can help Survivor Charity Foundation reach more vulnerable people and communities.",
+
     support_us:"Support Survivor Foundation",
 
-    prayers_title:"Prayer & Hope
+    prayers_title:"Prayer & Hope",
+
+    prayers_subtitle:"Standing together in faith, hope and compassion.",
+
+    prayer_heading:"A Message of Hope",
+
+    prayer_text:"We believe that hope can strengthen individuals, families and communities. We welcome prayers, encouragement and positive support for the people we serve.",
+
+    prayer1_title:"Pray for Families",
+
+    prayer1_text:"Pray for vulnerable families to receive strength, support and new opportunities.",
+
+    prayer2_title:"Pray for Children",
+
+    prayer2_text:"Pray that every child has access to education, protection, care and hope.",
+
+    prayer3_title:"Pray for Communities",
+
+    prayer3_text:"Pray for stronger, healthier and more sustainable communities.",
+
+    prayer_quote:"Hope grows when people choose to care, serve and stand together.",
+
+    prayer_ending:"Thank you for standing with Survivor Charity Foundation.",
+
+    gallery_title:"Our Gallery",
+
+    gallery_subtitle:"Moments from our community work and activities.",
+
+    contact_title:"Contact Survivor Charity Foundation",
+
+    contact_subtitle:"We would love to hear from you, work with you and build stronger communities together.",
+
+    phone:"Phone",
+
+    email:"Email",
+
+    location:"Location",
+
+    location_text:"Tanzania",
+
+    youtube:"YouTube",
+
+    instagram:"Instagram",
+
+    whatsapp:"WhatsApp",
+
+    name_placeholder:"Your Name",
+
+    email_placeholder:"Your Email",
+
+    subject_placeholder:"Subject",
+
+    message_placeholder:"Your Message",
+
+    send_message:"Send Message",
+
+    footer_tagline:"Hope • Strength • Transformation",
+
+    footer_founder:"Founded and led by Joshua John Baraba"
+
+  },
+
+
+  sw: {
+
+    nav_home:"Nyumbani",
+
+    nav_about:"Kuhusu Sisi",
+
+    nav_founder:"Mwanzilishi & CEO",
+
+    nav_mission:"Dhamira",
+
+    nav_programs:"Programu",
+
+    nav_gallery:"Picha",
+
+    nav_prayers:"Maombi",
+
+    nav_contact:"Mawasiliano",
+
+    hero_title:"Tumaini, Nguvu & Mabadiliko",
+
+    hero_text:"Kuwawezesha watu walio katika mazingira magumu na jamii kujenga maisha bora, yenye afya na endelevu.",
+
+    learn_more:"Jifunze Zaidi",
+
+    meet_founder:"Kutana na Mwanzilishi",
+
+    about_title:"Kuhusu Survivor Foundation",
+
+    about_subtitle:"Kuleta mabadiliko chanya kupitia huruma na vitendo.",
+
+    who_we_are:"Sisi Ni Nani",
+
+    about_p1:"Survivor Charity Foundation ni taasisi inayolenga jamii na inayojitolea kusaidia watu na jamii zilizo katika mazingira magumu.",
+
+    about_p2:"Tunaamini kila mtu anastahili heshima, fursa na tumaini.",
+
+    about_p3:"Kupitia elimu, afya, uwezeshaji wa vijana, maendeleo ya jamii na ushirikiano, tunafanya kazi kuleta mabadiliko chanya na endelevu.",
+
+    our_programs:"Programu Zetu",
+
+    founder_title:"Mwanzilishi & CEO",
+
+    founder_subtitle:"Uongozi wa Survivor Foundation",
+
+    founder_role:"Mwanzilishi & CEO — Survivor Foundation",
+
+    founder_p1:"Survivor Charity Foundation ilianzishwa kwa maono ya kuleta tumaini na fursa kwa watu walio katika mazingira magumu.",
+
+    founder_p2:"Taasisi imejikita katika kuhudumia jamii kupitia huruma, uongozi wenye uwajibikaji na mipango endelevu.",
+
+    founder_p3:"Lengo letu ni kuunganisha watu, mashirika na rasilimali ili kuleta matokeo yenye maana na ya kudumu katika jamii.",
+
+    contact_foundation:"Wasiliana na Survivor Foundation",
+
+    mission_title:"Dhamira, Maono & Lengo",
+
+    mission:"Dhamira",
+
+    mission_text:"Kuwawezesha watu na jamii zilizo katika mazingira magumu kupitia msaada, elimu, afya na maendeleo endelevu.",
+
+    vision:"Maono",
+
+    vision_text:"Jamii ambayo kila mtu ana fursa ya kuishi kwa heshima, tumaini na maisha bora ya baadaye.",
+
+    purpose:"Lengo",
+
+    purpose_text:"Kuhudumia kwa huruma, kuimarisha jamii na kuleta mabadiliko chanya ya kudumu.",
+
+    values_title:"Misingi Yetu",
+
+    compassion:"Huruma",
+
+    compassion_text:"Tunawajali watu kwa upendo, heshima na utu.",
+
+    partnership:"Ushirikiano",
+
+    partnership_text:"Tunaamini mabadiliko yenye maana huwa makubwa zaidi tunapofanya kazi pamoja.",
+
+    integrity:"Uadilifu",
+
+    integrity_text:"Tunafanya kazi kwa uaminifu, uwazi na uwajibikaji.",
+
+    sustainability:"Uendelevu",
+
+    sustainability_text:"Tunaangazia suluhisho zinazoweza kuleta matokeo ya muda mrefu.",
+
+    objectives_title:"Malengo Yetu",
+
+    objective1:"Kusaidia Watu Walio Katika Mazingira Magumu",
+
+    objective2:"Kukuza Elimu",
+
+    objective3:"Kuboresha Afya ya Jamii",
+
+    objective4:"Kuwawezesha Jamii",
+
+    objective5:"Fursa kwa Vijana",
+
+    objective6:"Kujenga Ushirikiano",
+
+    programs_title:"Programu Zetu",
+
+    programs_subtitle:"Programu zinazolenga kuleta matokeo yenye maana katika jamii.",
+
+    healthcare:"Huduma za Afya",
+
+    healthcare_text:"Kusaidia upatikanaji wa huduma bora za afya na elimu ya afya.",
+
+    education:"Elimu",
+
+    education_text:"Kusaidia watoto na vijana kupata elimu na fursa za kujifunza.",
+
+    community_support:"Msaada wa Jamii",
+
+    community_support_text:"Kusaidia watu binafsi na familia zilizo katika mazingira magumu.",
+
+    community_development:"Maendeleo ya Jamii",
+
+    community_development_text:"Kukuza mipango endelevu inayoiimarisha jamii.",
+
+    youth_empowerment:"Uwezeshaji wa Vijana",
+
+    youth_empowerment_text:"Kutoa fursa kwa vijana kukua na kushiriki katika maendeleo.",
+
+    skills:"Ujuzi & Fursa",
+
+    skills_text:"Kuwasaidia watu kupata ujuzi unaoweza kusaidia maisha yao ya baadaye.",
+
+    impact_title:"Dhamira Yetu ya Kuleta Matokeo",
+
+    people:"Watu",
+
+    people_text:"Kuwaweka watu katikati ya kila tunachofanya.",
+
+    hope:"Tumaini",
+
+    hope_text:"Kujenga tumaini kwa watu na jamii zilizo katika mazingira magumu.",
+
+    action:"Vitendo",
+
+    action_text:"Kubadilisha huruma kuwa vitendo halisi.",
+
+    future:"Baadaye",
+
+    future_text:"Kujenga jamii imara na endelevu zaidi.",
+
+    involved_title:"Shiriki Nasi",
+
+    involved_subtitle:"Kuna njia nyingi za kusimama pamoja na Survivor Charity Foundation.",
+
+    donor:"Kuwa Mfadhili",
+
+    donor_text:"Mchango wako unaweza kutusaidia kusaidia watu na jamii wenye mahitaji.",
+
+    contact_us:"Wasiliana Nasi",
+
+    volunteer:"Kuwa Kujitolea",
+
+    volunteer_text:"Jiunge nasi katika kuhudumia jamii na kuleta mabadiliko chanya.",
+
+    join_us:"Jiunge Nasi",
+
+    partner:"Shirikiana Nasi",
+
+    partner_text:"Mashirika na watu binafsi wanaweza kushirikiana nasi kupanua matokeo yetu.",
+
+    partner_us:"Shirikiana Nasi",
+
+    donate_title:"Saidia Dhamira Yetu",
+
+    donate_text:"Msaada wako unaweza kusaidia Survivor Charity Foundation kuwafikia watu na jamii nyingi zaidi zilizo katika mazingira magumu.",
+
+    support_us:"Saidia Survivor Foundation",
+
+    prayers_title:"Maombi & Tumaini",
+
+    prayers_subtitle:"Tukiwa pamoja katika imani, tumaini na huruma.",
+
+    prayer_heading:"Ujumbe wa Tumaini",
+
+    prayer_text:"Tunaamini tumaini linaweza kuwaimarisha watu binafsi, familia na jamii. Tunakaribisha maombi, faraja na msaada chanya kwa watu tunaowahudumia.",
+
+    prayer1_title:"Ombea Familia",
+
+    prayer1_text:"Waombee familia zilizo katika mazingira magumu zipate nguvu, msaada na fursa mpya.",
+
+    prayer2_title:"Ombea Watoto",
+
+    prayer2_text:"Omba kila mtoto apate elimu, ulinzi, malezi na tumaini.",
+
+    prayer3_title:"Ombea Jamii",
+
+    prayer3_text:"Ombea jamii zilizo imara, zenye afya na endelevu.",
+
+    prayer_quote:"Tumaini hukua pale watu wanapochagua kujali, kuhudumia na kusimama pamoja.",
+
+    prayer_ending:"Asante kwa kusimama pamoja na Survivor Charity Foundation.",
+
+    gallery_title:"Picha Zetu",
+
+    gallery_subtitle:"Matukio kutoka katika shughuli na kazi zetu za kijamii.",
+
+    contact_title:"Wasiliana na Survivor Charity Foundation",
+
+    contact_subtitle:"Tunafurahia kusikia kutoka kwako, kufanya kazi pamoja na kujenga jamii imara zaidi.",
+
+    phone:"Simu",
+
+    email:"Barua Pepe",
+
+    location:"Mahali",
+
+    location_text:"Tanzania",
+
+    youtube:"YouTube",
+
+    instagram:"Instagram",
+
+    whatsapp:"WhatsApp",
+
+    name_placeholder:"Jina Lako",
+
+    email_placeholder:"Barua Pepe Yako",
+
+    subject_placeholder:"Mada",
+
+    message_placeholder:"Ujumbe Wako",
+
+    send_message:"Tuma Ujumbe",
+
+    footer_tagline:"Tumaini • Nguvu • Mabadiliko",
+
+    footer_founder:"Imeanzishwa na kuongozwa na Joshua John Baraba"
+
+  }
+
+};
+
+
+/* ================= LANGUAGE FUNCTION ================= */
+
+function setLanguage(lang){
+
+  const selectedLanguage =
+    translations[lang];
+
+  if(!selectedLanguage) return;
+
+
+  document.querySelectorAll("[data-i18n]").forEach(element => {
+
+    const key =
+      element.getAttribute("data-i18n");
+
+    if(selectedLanguage[key]){
+
+      element.textContent =
+        selectedLanguage[key];
+
+    }
+
+  });
+
+
+  document
+    .querySelectorAll("[data-i18n-placeholder]")
+    .forEach(element => {
+
+      const key =
+        element.getAttribute("data-i18n-placeholder");
+
+      if(selectedLanguage[key]){
+
+        element.placeholder =
+          selectedLanguage[key];
+
+      }
+
+    });
+
+
+  document.documentElement.lang =
+    lang === "sw" ? "sw" : "en";
+
+
+  localStorage.setItem(
+    "scf_language",
+    lang
+  );
+
+}
+
+
+/* ================= LANGUAGE SELECT ================= */
+
+document
+  .getElementById("languageSelect")
+  .addEventListener("change", function(){
+
+    setLanguage(this.value);
+
+  });
+
+
+/* ================= LOAD SAVED LANGUAGE ================= */
+
+const savedLanguage =
+  localStorage.getItem("scf_language") || "en";
+
+document
+  .getElementById("languageSelect")
+  .value = savedLanguage;
+
+setLanguage(savedLanguage);
+
+
+/* ================= BACK TO TOP ================= */
+
+const topBtn =
+  document.getElementById("topBtn");
+
+
+window.addEventListener("scroll", function(){
+
+  if(window.scrollY > 400){
+
+    topBtn.style.display = "block";
+
+  }else{
+
+    topBtn.style.display = "none";
+
+  }
+
+});
+
+
+function goTop(){
+
+  window.scrollTo({
+    top:0,
+    behavior:"smooth"
+  });
+
+}
+
+
+/* ================= CLOSE MENU ON RESIZE ================= */
+
+window.addEventListener("resize", function(){
+
+  if(window.innerWidth > 900){
+
+    closeMenu();
+
+  }
+
+});
+
+
+</script>
+
+</body>
+</html>
