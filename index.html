@@ -21,8 +21,6 @@
 
 <style>
 
-/* ================= GENERAL ================= */
-
 *{
   margin:0;
   padding:0;
@@ -68,7 +66,7 @@ section{
 }
 
 
-/* ================= NAVBAR ================= */
+/* NAVBAR */
 
 .navbar{
   width:100%;
@@ -144,7 +142,7 @@ section{
 }
 
 
-/* ================= HERO ================= */
+/* HERO */
 
 .hero{
   min-height:85vh;
@@ -192,7 +190,7 @@ section{
 }
 
 
-/* ================= ABOUT ================= */
+/* ABOUT */
 
 .about{
   display:grid;
@@ -212,7 +210,7 @@ section{
 }
 
 
-/* ================= FOUNDER ================= */
+/* FOUNDER */
 
 .founder{
   display:grid;
@@ -243,7 +241,7 @@ section{
 }
 
 
-/* ================= CARDS ================= */
+/* CARDS */
 
 .cards{
   display:grid;
@@ -268,7 +266,7 @@ section{
 }
 
 
-/* ================= OBJECTIVES ================= */
+/* OBJECTIVES */
 
 .objectives{
   display:grid;
@@ -290,7 +288,7 @@ section{
 }
 
 
-/* ================= GALLERY ================= */
+/* GALLERY */
 
 .gallery{
   display:grid;
@@ -311,7 +309,7 @@ section{
 }
 
 
-/* ================= IMPACT ================= */
+/* IMPACT */
 
 .impact{
   background:#f8f8f8;
@@ -337,7 +335,7 @@ section{
 }
 
 
-/* ================= INVOLVED ================= */
+/* INVOLVED */
 
 .involved{
   display:grid;
@@ -346,7 +344,7 @@ section{
 }
 
 
-/* ================= DONATE ================= */
+/* DONATE */
 
 .donate{
   text-align:center;
@@ -365,7 +363,7 @@ section{
 }
 
 
-/* ================= PRAYERS ================= */
+/* PRAYERS */
 
 .prayers{
   background:#f8f8f8;
@@ -413,7 +411,7 @@ section{
 }
 
 
-/* ================= CONTACT ================= */
+/* CONTACT */
 
 .contact{
   display:grid;
@@ -471,7 +469,7 @@ form textarea:focus{
 }
 
 
-/* ================= FOOTER ================= */
+/* FOOTER */
 
 footer{
   background:#222;
@@ -496,7 +494,7 @@ footer p{
 }
 
 
-/* ================= MOBILE ================= */
+/* MOBILE */
 
 @media(max-width:900px){
 
@@ -606,7 +604,7 @@ footer p{
 }
 
 
-/* ================= SOCIAL BUTTONS ================= */
+/* SOCIAL BUTTONS */
 
 .social-links{
   margin-top:25px;
@@ -624,7 +622,7 @@ footer p{
 }
 
 
-/* ================= BACK TO TOP ================= */
+/* BACK TO TOP */
 
 #topBtn{
   position:fixed;
@@ -645,8 +643,6 @@ footer p{
 </style>
 
 
-<!-- ================= SEO STRUCTURED DATA ================= -->
-
 <script type="application/ld+json">
 {
   "@context":"https://schema.org",
@@ -664,11 +660,10 @@ footer p{
 
 </head>
 
-
 <body>
 
 
-<!-- ================= NAVBAR ================= -->
+<!-- NAVBAR -->
 
 <nav class="navbar">
 
@@ -678,56 +673,38 @@ footer p{
       Survivor Charity Foundation
     </a>
 
-
     <div class="nav-links" id="navLinks">
 
-      <a href="#home" data-i18n="nav_home" onclick="closeMenu()">
-        Home
-      </a>
+      <a href="#home" data-i18n="nav_home" onclick="closeMenu()">Home</a>
 
-      <a href="#about" data-i18n="nav_about" onclick="closeMenu()">
-        About Us
-      </a>
+      <a href="#about" data-i18n="nav_about" onclick="closeMenu()">About Us</a>
 
-      <a href="#founder" data-i18n="nav_founder" onclick="closeMenu()">
-        Founder & CEO
-      </a>
+      <a href="#founder" data-i18n="nav_founder" onclick="closeMenu()">Founder & CEO</a>
 
-      <a href="#mission" data-i18n="nav_mission" onclick="closeMenu()">
-        Mission
-      </a>
+      <a href="#mission" data-i18n="nav_mission" onclick="closeMenu()">Mission</a>
 
-      <a href="#programs" data-i18n="nav_programs" onclick="closeMenu()">
-        Programs
-      </a>
+      <a href="#programs" data-i18n="nav_programs" onclick="closeMenu()">Programs</a>
 
-      <a href="#gallery" data-i18n="nav_gallery" onclick="closeMenu()">
-        Gallery
-      </a>
+      <a href="#gallery" data-i18n="nav_gallery" onclick="closeMenu()">Gallery</a>
 
-      <a href="#prayers" data-i18n="nav_prayers" onclick="closeMenu()">
-        Prayers
-      </a>
+      <a href="#prayers" data-i18n="nav_prayers" onclick="closeMenu()">Prayers</a>
 
-      <a href="#contact" data-i18n="nav_contact" onclick="closeMenu()">
-        Contact
-      </a>
+      <a href="#contact" data-i18n="nav_contact" onclick="closeMenu()">Contact</a>
 
     </div>
-
 
     <div class="nav-actions">
 
       <select
         class="language-select"
         id="languageSelect"
-        aria-label="Language">
+        aria-label="Language"
+        onchange="setLanguage(this.value)">
 
         <option value="en">🇬🇧 EN</option>
         <option value="sw">🇹🇿 SW</option>
 
       </select>
-
 
       <button
         class="menu-btn"
@@ -745,7 +722,7 @@ footer p{
 </nav>
 
 
-<!-- ================= HERO ================= -->
+<!-- HERO -->
 
 <section class="hero" id="home">
 
@@ -776,7 +753,7 @@ footer p{
 </section>
 
 
-<!-- ================= ABOUT ================= -->
+<!-- ABOUT -->
 
 <section id="about">
 
@@ -793,7 +770,6 @@ footer p{
       </p>
 
     </div>
-
 
     <div class="about">
 
@@ -828,7 +804,7 @@ footer p{
 </section>
 
 
-<!-- ================= FOUNDER ================= -->
+<!-- FOUNDER -->
 
 <section id="founder">
 
@@ -846,7 +822,6 @@ footer p{
 
     </div>
 
-
     <div class="founder">
 
       <div>
@@ -856,7 +831,6 @@ footer p{
           alt="Survivor Charity Foundation logo">
 
       </div>
-
 
       <div>
 
@@ -893,7 +867,7 @@ footer p{
 </section>
 
 
-<!-- ================= MISSION ================= -->
+<!-- MISSION -->
 
 <section id="mission">
 
@@ -906,7 +880,6 @@ footer p{
       </h2>
 
     </div>
-
 
     <div class="cards">
 
@@ -922,7 +895,6 @@ footer p{
 
       </div>
 
-
       <div class="card">
 
         <h3 data-i18n="vision">
@@ -934,7 +906,6 @@ footer p{
         </p>
 
       </div>
-
 
       <div class="card">
 
@@ -950,7 +921,6 @@ footer p{
 
     </div>
 
-
     <div class="section-title" style="margin-top:70px;">
 
       <h2 data-i18n="values_title">
@@ -958,7 +928,6 @@ footer p{
       </h2>
 
     </div>
-
 
     <div class="cards">
 
@@ -974,7 +943,6 @@ footer p{
 
       </div>
 
-
       <div class="card">
 
         <h3 data-i18n="partnership">
@@ -987,7 +955,6 @@ footer p{
 
       </div>
 
-
       <div class="card">
 
         <h3 data-i18n="integrity">
@@ -999,7 +966,6 @@ footer p{
         </p>
 
       </div>
-
 
       <div class="card">
 
@@ -1020,7 +986,7 @@ footer p{
 </section>
 
 
-<!-- ================= OBJECTIVES ================= -->
+<!-- OBJECTIVES -->
 
 <section>
 
@@ -1034,49 +1000,36 @@ footer p{
 
     </div>
 
-
     <div class="objectives">
 
       <div class="objective">
         <strong>01</strong>
-        <span data-i18n="objective1">
-          Support Vulnerable People
-        </span>
+        <span data-i18n="objective1">Support Vulnerable People</span>
       </div>
 
       <div class="objective">
         <strong>02</strong>
-        <span data-i18n="objective2">
-          Promote Education
-        </span>
+        <span data-i18n="objective2">Promote Education</span>
       </div>
 
       <div class="objective">
         <strong>03</strong>
-        <span data-i18n="objective3">
-          Improve Community Health
-        </span>
+        <span data-i18n="objective3">Improve Community Health</span>
       </div>
 
       <div class="objective">
         <strong>04</strong>
-        <span data-i18n="objective4">
-          Empower Communities
-        </span>
+        <span data-i18n="objective4">Empower Communities</span>
       </div>
 
       <div class="objective">
         <strong>05</strong>
-        <span data-i18n="objective5">
-          Youth Opportunities
-        </span>
+        <span data-i18n="objective5">Youth Opportunities</span>
       </div>
 
       <div class="objective">
         <strong>06</strong>
-        <span data-i18n="objective6">
-          Build Partnerships
-        </span>
+        <span data-i18n="objective6">Build Partnerships</span>
       </div>
 
     </div>
@@ -1086,7 +1039,7 @@ footer p{
 </section>
 
 
-<!-- ================= PROGRAMS ================= -->
+<!-- PROGRAMS -->
 
 <section id="programs">
 
@@ -1104,14 +1057,11 @@ footer p{
 
     </div>
 
-
     <div class="cards">
 
       <div class="card">
 
-        <h3 data-i18n="healthcare">
-          Healthcare
-        </h3>
+        <h3 data-i18n="healthcare">Healthcare</h3>
 
         <p data-i18n="healthcare_text">
           Supporting access to better healthcare and health awareness.
@@ -1119,19 +1069,15 @@ footer p{
 
       </div>
 
-
       <div class="card">
 
-        <h3 data-i18n="education">
-          Education
-        </h3>
+        <h3 data-i18n="education">Education</h3>
 
         <p data-i18n="education_text">
           Supporting children and young people to access education and learning opportunities.
         </p>
 
       </div>
-
 
       <div class="card">
 
@@ -1145,7 +1091,6 @@ footer p{
 
       </div>
 
-
       <div class="card">
 
         <h3 data-i18n="community_development">
@@ -1158,7 +1103,6 @@ footer p{
 
       </div>
 
-
       <div class="card">
 
         <h3 data-i18n="youth_empowerment">
@@ -1170,7 +1114,6 @@ footer p{
         </p>
 
       </div>
-
 
       <div class="card">
 
@@ -1191,7 +1134,7 @@ footer p{
 </section>
 
 
-<!-- ================= IMPACT ================= -->
+<!-- IMPACT -->
 
 <section class="impact">
 
@@ -1205,14 +1148,11 @@ footer p{
 
     </div>
 
-
     <div class="impact-grid">
 
       <div class="impact-box">
 
-        <h3 data-i18n="people">
-          People
-        </h3>
+        <h3 data-i18n="people">People</h3>
 
         <p data-i18n="people_text">
           Putting people at the heart of everything we do.
@@ -1220,12 +1160,9 @@ footer p{
 
       </div>
 
-
       <div class="impact-box">
 
-        <h3 data-i18n="hope">
-          Hope
-        </h3>
+        <h3 data-i18n="hope">Hope</h3>
 
         <p data-i18n="hope_text">
           Creating hope for vulnerable people and communities.
@@ -1233,12 +1170,9 @@ footer p{
 
       </div>
 
-
       <div class="impact-box">
 
-        <h3 data-i18n="action">
-          Action
-        </h3>
+        <h3 data-i18n="action">Action</h3>
 
         <p data-i18n="action_text">
           Turning compassion into practical action.
@@ -1246,12 +1180,9 @@ footer p{
 
       </div>
 
-
       <div class="impact-box">
 
-        <h3 data-i18n="future">
-          Future
-        </h3>
+        <h3 data-i18n="future">Future</h3>
 
         <p data-i18n="future_text">
           Building stronger and more sustainable communities.
@@ -1266,7 +1197,7 @@ footer p{
 </section>
 
 
-<!-- ================= GET INVOLVED ================= -->
+<!-- GET INVOLVED -->
 
 <section id="involved">
 
@@ -1283,7 +1214,6 @@ footer p{
       </p>
 
     </div>
-
 
     <div class="involved">
 
@@ -1303,7 +1233,6 @@ footer p{
 
       </div>
 
-
       <div class="card">
 
         <h3 data-i18n="volunteer">
@@ -1319,7 +1248,6 @@ footer p{
         </a>
 
       </div>
-
 
       <div class="card">
 
@@ -1344,7 +1272,7 @@ footer p{
 </section>
 
 
-<!-- ================= DONATE ================= -->
+<!-- DONATE -->
 
 <section class="donate">
 
@@ -1367,7 +1295,7 @@ footer p{
 </section>
 
 
-<!-- ================= PRAYERS ================= -->
+<!-- PRAYERS -->
 
 <section class="prayers" id="prayers">
 
@@ -1385,7 +1313,6 @@ footer p{
 
     </div>
 
-
     <div class="prayer-intro">
 
       <h3 data-i18n="prayer_heading">
@@ -1398,7 +1325,6 @@ footer p{
       </p>
 
     </div>
-
 
     <div class="cards">
 
@@ -1414,7 +1340,6 @@ footer p{
 
       </div>
 
-
       <div class="card prayer-card">
 
         <h3 data-i18n="prayer2_title">
@@ -1426,7 +1351,6 @@ footer p{
         </p>
 
       </div>
-
 
       <div class="card prayer-card">
 
@@ -1442,7 +1366,6 @@ footer p{
 
     </div>
 
-
     <div class="prayer-quote">
 
       <p data-i18n="prayer_quote">
@@ -1450,7 +1373,6 @@ footer p{
       </p>
 
     </div>
-
 
     <div class="prayer-ending">
 
@@ -1465,7 +1387,7 @@ footer p{
 </section>
 
 
-<!-- ================= GALLERY ================= -->
+<!-- GALLERY -->
 
 <section id="gallery">
 
@@ -1482,7 +1404,6 @@ footer p{
       </p>
 
     </div>
-
 
     <div class="gallery">
 
@@ -1511,7 +1432,7 @@ footer p{
 </section>
 
 
-<!-- ================= CONTACT ================= -->
+<!-- CONTACT -->
 
 <section id="contact">
 
@@ -1529,19 +1450,13 @@ footer p{
 
     </div>
 
-
     <div class="contact">
-
-
-      <!-- CONTACT INFORMATION -->
 
       <div class="contact-info">
 
         <div>
 
-          <strong data-i18n="phone">
-            Phone
-          </strong>
+          <strong data-i18n="phone">Phone</strong>
 
           <a href="tel:+255785129140">
             +255 785 129 140
@@ -1549,12 +1464,9 @@ footer p{
 
         </div>
 
-
         <div>
 
-          <strong data-i18n="email">
-            Email
-          </strong>
+          <strong data-i18n="email">Email</strong>
 
           <a href="mailto:joshuabaraba2002@gmail.com">
             joshuabaraba2002@gmail.com
@@ -1562,12 +1474,9 @@ footer p{
 
         </div>
 
-
         <div>
 
-          <strong data-i18n="location">
-            Location
-          </strong>
+          <strong data-i18n="location">Location</strong>
 
           <span data-i18n="location_text">
             Tanzania
@@ -1575,12 +1484,9 @@ footer p{
 
         </div>
 
-
         <div>
 
-          <strong data-i18n="youtube">
-            YouTube
-          </strong>
+          <strong data-i18n="youtube">YouTube</strong>
 
           <a
             href="https://www.youtube.com/@survivourtv"
@@ -1593,12 +1499,9 @@ footer p{
 
         </div>
 
-
         <div>
 
-          <strong data-i18n="instagram">
-            Instagram
-          </strong>
+          <strong data-i18n="instagram">Instagram</strong>
 
           <a
             href="https://www.instagram.com/"
@@ -1611,12 +1514,9 @@ footer p{
 
         </div>
 
-
         <div>
 
-          <strong data-i18n="whatsapp">
-            WhatsApp
-          </strong>
+          <strong data-i18n="whatsapp">WhatsApp</strong>
 
           <a
             href="https://wa.me/255785129140"
@@ -1628,7 +1528,6 @@ footer p{
           </a>
 
         </div>
-
 
         <div class="social-links">
 
@@ -1655,8 +1554,6 @@ footer p{
       </div>
 
 
-      <!-- CONTACT FORM -->
-
       <div class="contact-box">
 
         <form
@@ -1671,14 +1568,12 @@ footer p{
             data-i18n-placeholder="name_placeholder"
             required>
 
-
           <input
             type="email"
             name="Email"
             placeholder="Your Email"
             data-i18n-placeholder="email_placeholder"
             required>
-
 
           <input
             type="text"
@@ -1687,13 +1582,11 @@ footer p{
             data-i18n-placeholder="subject_placeholder"
             required>
 
-
           <textarea
             name="Message"
             placeholder="Your Message"
             data-i18n-placeholder="message_placeholder"
             required></textarea>
-
 
           <button
             type="submit"
@@ -1715,7 +1608,7 @@ footer p{
 </section>
 
 
-<!-- ================= FOOTER ================= -->
+<!-- FOOTER -->
 
 <footer>
 
@@ -1733,25 +1626,15 @@ footer p{
 
   <p>
 
-    <a href="#home" data-i18n="nav_home">
-      Home
-    </a>
+    <a href="#home" data-i18n="nav_home">Home</a>
 
-    <a href="#about" data-i18n="nav_about">
-      About
-    </a>
+    <a href="#about" data-i18n="nav_about">About</a>
 
-    <a href="#programs" data-i18n="nav_programs">
-      Programs
-    </a>
+    <a href="#programs" data-i18n="nav_programs">Programs</a>
 
-    <a href="#gallery" data-i18n="nav_gallery">
-      Gallery
-    </a>
+    <a href="#gallery" data-i18n="nav_gallery">Gallery</a>
 
-    <a href="#contact" data-i18n="nav_contact">
-      Contact
-    </a>
+    <a href="#contact" data-i18n="nav_contact">Contact</a>
 
   </p>
 
@@ -1764,7 +1647,7 @@ footer p{
 </footer>
 
 
-<!-- ================= BACK TO TOP ================= -->
+<!-- BACK TO TOP -->
 
 <button id="topBtn" onclick="goTop()" aria-label="Back to top">
   ↑
@@ -1774,35 +1657,6 @@ footer p{
 <!-- ================= JAVASCRIPT ================= -->
 
 <script>
-
-
-/* ================= MOBILE MENU ================= */
-
-function toggleMenu(){
-
-  const nav =
-    document.getElementById("navLinks");
-
-  nav.classList.toggle("active");
-
-}
-
-
-function closeMenu(){
-
-  const nav =
-    document.getElementById("navLinks");
-
-  nav.classList.remove("active");
-
-}
-
-
-/* ================= YEAR ================= */
-
-document.getElementById("year").textContent =
-  new Date().getFullYear();
-
 
 /* ================= TRANSLATIONS ================= */
 
@@ -1827,9 +1681,7 @@ const translations = {
     meet_founder:"Meet Our Founder",
 
     about_title:"About Survivor Foundation",
-
     about_subtitle:"Creating positive change through compassion and action.",
-
     who_we_are:"Who We Are",
 
     about_p1:"Survivor Charity Foundation is a community-focused organization committed to supporting vulnerable people and communities.",
@@ -1841,9 +1693,7 @@ const translations = {
     our_programs:"Our Programs",
 
     founder_title:"Founder & CEO",
-
     founder_subtitle:"Leadership behind Survivor Foundation",
-
     founder_role:"Founder & CEO — Survivor Foundation",
 
     founder_p1:"Survivor Charity Foundation was founded with a vision of creating hope and opportunities for vulnerable people.",
@@ -1857,33 +1707,26 @@ const translations = {
     mission_title:"Mission, Vision & Purpose",
 
     mission:"Mission",
-
     mission_text:"To empower vulnerable people and communities through practical support, education, healthcare and sustainable development.",
 
     vision:"Vision",
-
     vision_text:"A society where every person has the opportunity to live with dignity, hope and a better future.",
 
     purpose:"Purpose",
-
     purpose_text:"To serve with compassion, strengthen communities and create lasting positive change.",
 
     values_title:"Our Core Values",
 
     compassion:"Compassion",
-
     compassion_text:"We care for people with kindness, dignity and respect.",
 
     partnership:"Partnership",
-
     partnership_text:"We believe meaningful change is stronger when we work together.",
 
     integrity:"Integrity",
-
     integrity_text:"We act with honesty, transparency and accountability.",
 
     sustainability:"Sustainability",
-
     sustainability_text:"We focus on solutions that create long-term impact.",
 
     objectives_title:"Our Objectives",
@@ -1900,45 +1743,35 @@ const translations = {
     programs_subtitle:"Practical programs designed to create meaningful community impact.",
 
     healthcare:"Healthcare",
-
     healthcare_text:"Supporting access to better healthcare and health awareness.",
 
     education:"Education",
-
     education_text:"Supporting children and young people to access education and learning opportunities.",
 
     community_support:"Community Support",
-
     community_support_text:"Supporting vulnerable individuals and families in communities.",
 
     community_development:"Community Development",
-
     community_development_text:"Promoting sustainable initiatives that strengthen communities.",
 
     youth_empowerment:"Youth Empowerment",
-
     youth_empowerment_text:"Creating opportunities for young people to grow and contribute.",
 
     skills:"Skills & Opportunities",
-
     skills_text:"Helping people develop skills that can support their future.",
 
     impact_title:"Our Commitment to Impact",
 
     people:"People",
-
     people_text:"Putting people at the heart of everything we do.",
 
     hope:"Hope",
-
     hope_text:"Creating hope for vulnerable people and communities.",
 
     action:"Action",
-
     action_text:"Turning compassion into practical action.",
 
     future:"Future",
-
     future_text:"Building stronger and more sustainable communities.",
 
     involved_title:"Get Involved",
@@ -1946,19 +1779,16 @@ const translations = {
     involved_subtitle:"There are many ways to stand with Survivor Charity Foundation.",
 
     donor:"Become a Donor",
-
     donor_text:"Your contribution can help us support people and communities in need.",
 
     contact_us:"Contact Us",
 
     volunteer:"Become a Volunteer",
-
     volunteer_text:"Join us in serving communities and creating positive change.",
 
     join_us:"Join Us",
 
     partner:"Partner With Us",
-
     partner_text:"Organizations and individuals can partner with us to expand our impact.",
 
     partner_us:"Partner With Us",
@@ -2002,25 +1832,17 @@ const translations = {
     contact_subtitle:"We would love to hear from you, work with you and build stronger communities together.",
 
     phone:"Phone",
-
     email:"Email",
-
     location:"Location",
-
     location_text:"Tanzania",
 
     youtube:"YouTube",
-
     instagram:"Instagram",
-
     whatsapp:"WhatsApp",
 
     name_placeholder:"Your Name",
-
     email_placeholder:"Your Email",
-
     subject_placeholder:"Subject",
-
     message_placeholder:"Your Message",
 
     send_message:"Send Message",
@@ -2035,19 +1857,12 @@ const translations = {
   sw: {
 
     nav_home:"Nyumbani",
-
     nav_about:"Kuhusu Sisi",
-
     nav_founder:"Mwanzilishi & CEO",
-
     nav_mission:"Dhamira",
-
     nav_programs:"Programu",
-
     nav_gallery:"Picha",
-
     nav_prayers:"Maombi",
-
     nav_contact:"Mawasiliano",
 
     hero_title:"Tumaini, Nguvu & Mabadiliko",
@@ -2055,7 +1870,6 @@ const translations = {
     hero_text:"Kuwawezesha watu walio katika mazingira magumu na jamii kujenga maisha bora, yenye afya na endelevu.",
 
     learn_more:"Jifunze Zaidi",
-
     meet_founder:"Kutana na Mwanzilishi",
 
     about_title:"Kuhusu Survivor Foundation",
@@ -2269,113 +2083,232 @@ const translations = {
   }
 
 };
-  /* ================= LANGUAGE FUNCTION ================= */
 
-function setLanguage(lang) {
 
-  const selectedLanguage = translations[lang];
+/* ================= LANGUAGE FUNCTION ================= */
 
-  if (!selectedLanguage) {
-    console.log("Language not found:", lang);
-    return;
+function setLanguage(lang){
+
+  if(!translations[lang]){
+    lang="en";
   }
 
-  /* Translate normal text */
-  document.querySelectorAll("[data-i18n]").forEach(function(element) {
+  const selectedLanguage=translations[lang];
 
-    const key = element.getAttribute("data-i18n");
+  document.querySelectorAll("[data-i18n]").forEach(function(element){
 
-    if (Object.prototype.hasOwnProperty.call(selectedLanguage, key)) {
-      element.textContent = selectedLanguage[key];
+    const key=element.getAttribute("data-i18n");
+
+    if(Object.prototype.hasOwnProperty.call(selectedLanguage,key)){
+
+      element.textContent=selectedLanguage[key];
+
     }
 
   });
 
 
-  /* Translate placeholders */
-  document.querySelectorAll("[data-i18n-placeholder]").forEach(function(element) {
+  document.querySelectorAll("[data-i18n-placeholder]").forEach(function(element){
 
-    const key = element.getAttribute("data-i18n-placeholder");
+    const key=element.getAttribute("data-i18n-placeholder");
 
-    if (Object.prototype.hasOwnProperty.call(selectedLanguage, key)) {
+    if(Object.prototype.hasOwnProperty.call(selectedLanguage,key)){
+
       element.setAttribute(
         "placeholder",
         selectedLanguage[key]
       );
+
     }
 
   });
 
 
-  /* Change HTML language */
-  document.documentElement.setAttribute(
-    "lang",
-    lang === "sw" ? "sw" : "en"
-  );
+  document.documentElement.lang=lang;
 
 
-  /* Save selected language */
-  try {
-    localStorage.setItem("scf_language", lang);
-  } catch (error) {
+  const languageSelect=
+    document.getElementById("languageSelect");
+
+  if(languageSelect){
+
+    languageSelect.value=lang;
+
+  }
+
+
+  try{
+
+    localStorage.setItem(
+      "scf_language",
+      lang
+    );
+
+  }catch(error){
+
     console.log("Language preference could not be saved.");
+
   }
 
 }
 
 
-/* ================= LANGUAGE SELECT ================= */
+/* ================= MOBILE MENU ================= */
 
-const languageSelect =
-  document.getElementById("languageSelect");
+function toggleMenu(){
 
-if (languageSelect) {
+  const nav=
+    document.getElementById("navLinks");
 
-  languageSelect.addEventListener("change", function() {
+  if(nav){
 
-    const selectedLang = this.value;
+    nav.classList.toggle("active");
 
-    console.log("Changing language to:", selectedLang);
+  }
 
-    setLanguage(selectedLang);
+}
 
+
+function closeMenu(){
+
+  const nav=
+    document.getElementById("navLinks");
+
+  if(nav){
+
+    nav.classList.remove("active");
+
+  }
+
+}
+
+
+/* ================= BACK TO TOP ================= */
+
+function goTop(){
+
+  window.scrollTo({
+    top:0,
+    behavior:"smooth"
   });
 
 }
 
 
-/* ================= LOAD SAVED LANGUAGE ================= */
+/* ================= PAGE START ================= */
 
-let savedLanguage = "en";
+document.addEventListener("DOMContentLoaded",function(){
 
-try {
+  /* YEAR */
 
-  savedLanguage =
-    localStorage.getItem("scf_language") || "en";
+  const year=
+    document.getElementById("year");
 
-} catch (error) {
+  if(year){
 
-  savedLanguage = "en";
+    year.textContent=
+      new Date().getFullYear();
 
-}
-
-
-/* Make sure only valid languages are loaded */
-
-if (!translations[savedLanguage]) {
-  savedLanguage = "en";
-}
+  }
 
 
-/* Set dropdown */
+  /* LANGUAGE */
 
-if (languageSelect) {
-  languageSelect.value = savedLanguage;
-}
+  const languageSelect=
+    document.getElementById("languageSelect");
+
+  let savedLanguage="en";
+
+  try{
+
+    savedLanguage=
+      localStorage.getItem("scf_language") || "en";
+
+  }catch(error){
+
+    savedLanguage="en";
+
+  }
 
 
-/* Apply language */
+  if(!translations[savedLanguage]){
 
-setLanguage(savedLanguage);
+    savedLanguage="en";
+
+  }
 
 
+  if(languageSelect){
+
+    languageSelect.value=savedLanguage;
+
+    languageSelect.addEventListener(
+      "change",
+      function(){
+
+        setLanguage(this.value);
+
+      }
+    );
+
+  }
+
+
+  setLanguage(savedLanguage);
+
+
+  /* BACK TO TOP BUTTON */
+
+  const topBtn=
+    document.getElementById("topBtn");
+
+  if(topBtn){
+
+    window.addEventListener(
+      "scroll",
+      function(){
+
+        if(window.scrollY>400){
+
+          topBtn.style.display="block";
+
+        }else{
+
+          topBtn.style.display="none";
+
+        }
+
+      }
+    );
+
+  }
+
+});
+
+
+/* ================= RESIZE ================= */
+
+window.addEventListener(
+  "resize",
+  function(){
+
+    if(window.innerWidth>900){
+
+      const nav=
+        document.getElementById("navLinks");
+
+      if(nav){
+
+        nav.classList.remove("active");
+
+      }
+
+    }
+
+  }
+);
+
+</script>
+
+</body>
+</html>
