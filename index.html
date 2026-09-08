@@ -3,32 +3,6 @@
 
 <head>
 
-<!-- NAVBAR -->
-<nav class="navbar">
-  <div class="nav-container">
-
-    <a href="#home" class="logo">
-      Survivor Charity Foundation
-    </a>
-
-    <div class="nav-links">
-      <a href="#home">Home</a>
-      <a href="#about">About Us</a>
-      <a href="#programs">Programs</a>
-      <a href="#gallery">Gallery</a>
-      <a href="#prayers">Prayers</a>
-      <a href="#contact">Contact</a>
-
-      <select class="language-select">
-        <option>🇬🇧 EN</option>
-        <option>🇹🇿 SW</option>
-      </select>
-    </div>
-
-  </div>
-</nav>
-  </body>
-
 <meta charset="UTF-8">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -50,33 +24,151 @@
 <meta property="og:type" content="website">
 
 
+<!-- =========================
+     NAVBAR CSS
+========================= -->
+
+<style>
+
+.navbar {
+  width: 100%;
+  background: #ffffff;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.nav-container {
+  max-width: 1150px;
+  margin: auto;
+  padding: 15px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: 700;
+  color: #333333;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #333333;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.nav-links a:hover {
+  color: #f5a623;
+}
+
+.language-select {
+  border: 1px solid #dddddd;
+  border-radius: 8px;
+  padding: 8px 10px;
+  background: white;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+
+  .nav-container {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .nav-links {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+  }
+
+  .logo {
+    text-align: center;
+  }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<!-- =========================
+     NAVBAR
+========================= -->
+
+<nav class="navbar">
+
+  <div class="nav-container">
+
+    <a href="#home" class="logo">
+      Survivor Charity Foundation
+    </a>
+
+    <div class="nav-links">
+
+      <a href="#home">Home</a>
+
+      <a href="#about">About Us</a>
+
+      <a href="#programs">Programs</a>
+
+      <a href="#gallery">Gallery</a>
+
+      <a href="#prayers">Prayers</a>
+
+      <a href="#contact">Contact</a>
+
+      <select class="language-select">
+        <option value="en">🇬🇧 EN</option>
+        <option value="sw">🇹🇿 SW</option>
+      </select>
+
+    </div>
+
+  </div>
+
+</nav>
+
+
 <!-- STRUCTURED DATA FOR GOOGLE -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@graph": [
     {
+      "@type": "Organization",
+      "name": "Survivor Charity Foundation",
+      "description": "A community-focused organization in Tanzania committed to empowering vulnerable people, supporting education, healthcare, youth opportunities and sustainable community development.",
+      "url": "https://survivor-charity-foundation.my.canva.site/orange-and-brown-digital-marketing-agency-flyer-your-story"
+    },
+    {
       "@type": "Person",
       "name": "Joshua John Baraba",
       "jobTitle": "Founder & CEO",
       "worksFor": {
         "@type": "Organization",
-        "name": "Survivor Foundation"
-      }
-    },
-    {
-      "@type": "Organization",
-      "name": "Survivor Foundation",
-      "founder": {
-        "@type": "Person",
-        "name": "Joshua John Baraba",
-        "jobTitle": "Founder & CEO"
+        "name": "Survivor Charity Foundation"
       }
     }
   ]
 }
 </script>
-
 
 <style>
 
